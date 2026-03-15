@@ -1,0 +1,62 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Study Diary",
+    "section": "",
+    "text": "Study Diary\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.\ntoken: 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\n1 + 1\n\n[1] 2",
+    "crumbs": [
+      "Study Diary"
+    ]
+  },
+  {
+    "objectID": "index.html#week1",
+    "href": "index.html#week1",
+    "title": "Study Diary",
+    "section": "Week1",
+    "text": "Week1\nConsult the assignment requirements document and complete your learning diary entry. We cover the tools to make the online learning diary next week, so in this week use a word editor, or markdown document and then add your content to your online diary next week.",
+    "crumbs": [
+      "Study Diary"
+    ]
+  },
+  {
+    "objectID": "index.html#week2",
+    "href": "index.html#week2",
+    "title": "Study Diary",
+    "section": "Week2",
+    "text": "Week2\n\n2.6.1 Xaringan\nCreate a small 9 slide presentation (not including reference slide(s)) and host it on GitHub - place the link in your Quarto portfolio\n\nSelect a sensor of your choice (any)\nCreate a short (maximum 9 slide, not including reference slide) presentation on the sensor in xaringan\n\nThe presentation will be marked in the same manner set out in mark scheme for the learning diary. Specifically:\n\nThe summary criterion will refer to the summary of the sensor you have selected.it will include independent thought\nThe application criterion will refer to and comment on examples of studies that have used the data from the sensor and their purpose\nThe reflection criterion will refer to what you have learnt in relation to the sensor, its use and how the data might be used in future work/a broader context.\n\nThe code below will embed your Xaringan presentation (URL) into your Quarto learning diary.\nxaringanExtra::embed_xaringan(url = \"URL of your presentation\",\n                              ratio = \"16:9\")\n\n\n2.6.2 Quarto learning diary\nThe production of the Quarto learning diary is not marked, but it is required for component 2. Once you have made your Quarto document update it with your learning diary entry from week 1, and the Xaringan presentation from week 2.",
+    "crumbs": [
+      "Study Diary"
+    ]
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "1  Introduction",
+    "section": "",
+    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "2  Summary",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever.\n\n1 + 1\n\n[1] 2",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Summary</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "crumbs": [
+      "References"
+    ]
+  }
+]

@@ -1,0 +1,15 @@
+# Study Diary {.unnumbered}
+
+This is a Quarto book.
+
+To learn more about Quarto books visit <https://quarto.org/docs/books>.
+
+token: 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
+
+```{r}
+1 + 1
+```
+
+## Week1
+
+Consult the assignment requirements document and complete your learning diary entry. We cover the tools to make the online learning diary next week, so in this week use a word editor, or markdown document and then add your content to your online diary next week.
