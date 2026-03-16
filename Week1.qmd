@@ -7,6 +7,7 @@ output:
     toc: true
     toc_float: true
 ---
+
 ## Content Summary
 
 This week's lecture and practical introduced the fundamental pipeline of Remote Sensing (RS), focusing on how electromagnetic energy reflected from the Earth's surface is recorded and quantified. We explored the "four resolutions" (Spatial, Spectral, Radiometric, and Temporal) as a MECE framework to evaluate data validity. A key takeaway was understanding RS as a dynamic data stream capable of visualizing social inequalities or environmental risks through wavelengths beyond human perception, such as infrared.
@@ -17,17 +18,13 @@ In the practical, I utilized QGIS and SNAP to examine the spatial and spectral c
 
 ![**Landsat-8 (30m) resolution over Central London. Spatial details are blurred into "Mixed Pixels."**](img/week1.30m.png){#fig-landsat}
 
-
 ## Applications
 
 This week’s introduction to remote sensing highlights how spatial and spectral resolution transition from theoretical concepts to vital tools for environmental justice. I have selected two studies that demonstrate this transition through contrasting scales.
 
-**Comparison of Macro and Micro Perspectives:**
-@wolch_urban_2014 provide a macro-level perspective, arguing that urban greening can paradoxically lead to "environmental gentrification" and the displacement of low-income residents. This demonstrates that time-series RS data is a crucial indicator for capturing broad social dynamics over decades. In contrast, @gascon_residential_2016 focus on a micro-level perspective regarding individual health. Here, the 10m resolution of Sentinel-2 is indispensable. Unlike the 30m resolution of Landsat, this technology captures "micro-scale greenery" like street trees and pocket parks. These elements were previously "invisible" to sensors but are essential for understanding daily human exposure to nature.
+**Comparison of Macro and Micro Perspectives:** @wolch_urban_2014 provide a macro-level perspective, arguing that urban greening can paradoxically lead to "environmental gentrification" and the displacement of low-income residents. This demonstrates that time-series RS data is a crucial indicator for capturing broad social dynamics over decades. In contrast, @gascon_residential_2016 focus on a micro-level perspective regarding individual health. Here, the 10m resolution of Sentinel-2 is indispensable. Unlike the 30m resolution of Landsat, this technology captures "micro-scale greenery" like street trees and pocket parks. These elements were previously "invisible" to sensors but are essential for understanding daily human exposure to nature.
 
-**Synthesis and Future Implementation:**
-Integrating these perspectives shows that high spatial resolution is a requirement for environmental justice rather than a technical luxury. By overlaying high-resolution environmental indicators with demographic data, we can logically visualize the "green gap" in vulnerable neighborhoods. This synthesis of macro-social trends (gentrification) and micro-spatial precision (exposure) is central to my own research interests. I intend to apply this dual-scale approach to future projects, possibly examining urban inequality in London or rapidly developing cities in Southeast Asia, where fine-grained resource distribution is the key to effective policy interventions.
-
+**Synthesis and Future Implementation:** Integrating these perspectives shows that high spatial resolution is a requirement for environmental justice rather than a technical luxury. By overlaying high-resolution environmental indicators with demographic data, we can logically visualize the "green gap" in vulnerable neighborhoods. This synthesis of macro-social trends (gentrification) and micro-spatial precision (exposure) is central to my own research interests. I intend to apply this dual-scale approach to future projects, possibly examining urban inequality in London or rapidly developing cities in Southeast Asia, where fine-grained resource distribution is the key to effective policy interventions.
 
 ## Reflection
 
@@ -43,4 +40,4 @@ Gascon, M., Triguero-Mas, M., Martínez, D., Dadvand, P., Forns, J., Plasència,
 
 Wolch, J.R., Byrne, J. and Newell, J.P. (2014). Urban green space, public health, and environmental justice: The challenge of making cities ‘just green enough’. *Landscape and Urban Planning*, 125, pp.234–244. Available at: https://doi.org/10.1016/j.landurbplan.2014.01.017.
 
----
+------------------------------------------------------------------------
