@@ -1,0 +1,27 @@
+---
+title: "Learning Diary: Week 5"
+subtitle: "Google Earth Engine I: Paradigm Shift in Spatial Analysis"
+author: "Tsuyoshi Choh"
+format: html
+---
+
+## 1. Content Summary
+
+### 1 Transition to Cloud-Based Analysis: "Bringing the code to the data"
+This week’s lecture introduced a transformative shift in geospatial workflows. While QGIS relies on manual operations and R enables local statistical rigor, Google Earth Engine (GEE) represents a fundamental paradigm shift. The core innovation is transitioning from downloading datasets to "bringing the code to the data." By executing scripts on Google’s cloud infrastructure, GEE allows near-instant processing of planetary-scale data regardless of local hardware specs. I perceive this as the "democratization of geospatial infrastructure." However, this liberation implies new dependencies on external factors like Google’s resource quotas and network stability, necessitating a strategic mindset for managing computational resources.
+
+### 2 Statistical Aggregation: Creating Certainty via Reducers
+In GEE, the "Reducer" is the essential mechanism for transforming vast raw data into meaningful information. This method stacks hundreds of satellite images to perform pixel-wise statistical aggregation. Traditionally, researchers spent significant effort searching for a single "lucky" cloud-free image; however, the Median Reducer converts this luck into mathematical certainty. During the practical, I compared raw imagery with reduced results. Unprocessed images exhibited haziness from cloud reflectance, but the median() function successfully restored the authentic spectral characteristics of the earth’s surface.
+
+![A London map made from OBIA](img/cloud_map.png)
+![A London map made from OBIA](img/cloud_free_map.png)
+
+Nevertheless, one must remain mindful that automated aggregation may discard rare but significant land-cover changes as mere outliers.
+
+### 3 Efficient Data Abstraction: PCA and the Evidence of the "97%"
+I was particularly intrigued by GEE’s "on-the-fly" computation, which automates re-projection and resolution adjustments. This liberates analysts from tedious pre-processing, allowing more time for substantive geographical inquiry. In the practical, I applied Principal Component Analysis (PCA) to condense 19 spectral bands. A brief lag during rendering exposed the bottleneck occurring when the client-side attempts to display complex server-side results. Numerically, the top three components accounted for approximately 97% of the total variance, confirming that the remaining dimensions were largely noise. 
+
+![A London map made from OBIA](img/rate_pca.png)
+
+While powerful, these automated processes risk becoming a "black box." Maintaining a critical stance toward mathematical verification is a prerequisite for truly harnessing the benefits of digital geography.
+---

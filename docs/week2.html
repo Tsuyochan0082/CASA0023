@@ -7,9 +7,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Tsuyoshi Choh">
-<meta name="dcterms.date" content="2026-01-20">
 
-<title>Learning Diary</title>
+<title>3&nbsp; Week 2: Portfolio and Presentation Tools – Learning Diary</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -32,7 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./week1.html" rel="next">
+<link href="./week3.html" rel="next">
+<link href="./week1.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -75,7 +75,7 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-sidebar floating fullcontent quarto-light">
+<body class="nav-sidebar floating quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -84,7 +84,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">index.html</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week2.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week 2: Portfolio and Presentation Tools</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -111,7 +111,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">index.html</span></span></a>
   </div>
 </li>
@@ -123,7 +123,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week2.html" class="sidebar-item-text sidebar-link">
+  <a href="./week2.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week 2: Portfolio and Presentation Tools</span></span></a>
   </div>
 </li>
@@ -162,13 +162,27 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#summary-from-gui-to-code-based-workflows" id="toc-summary-from-gui-to-code-based-workflows" class="nav-link active" data-scroll-target="#summary-from-gui-to-code-based-workflows"><span class="header-section-number">3.1</span> Summary: From GUI to Code-based Workflows</a>
+  <ul class="collapse">
+  <li><a href="#quarto-the-foundation-for-a-living-notebook" id="toc-quarto-the-foundation-for-a-living-notebook" class="nav-link" data-scroll-target="#quarto-the-foundation-for-a-living-notebook"><span class="header-section-number">3.1.1</span> 1. Quarto: The Foundation for a “Living” Notebook</a></li>
+  <li><a href="#xaringan-sharing-knowledge-through-the-sharingan" id="toc-xaringan-sharing-knowledge-through-the-sharingan" class="nav-link" data-scroll-target="#xaringan-sharing-knowledge-through-the-sharingan"><span class="header-section-number">3.1.2</span> 2. Xaringan: Sharing Knowledge through the “Sharingan”</a></li>
+  <li><a href="#deploying-a-digital-twin-on-github" id="toc-deploying-a-digital-twin-on-github" class="nav-link" data-scroll-target="#deploying-a-digital-twin-on-github"><span class="header-section-number">3.1.3</span> 3. Deploying a “Digital Twin” on GitHub</a></li>
+  </ul></li>
+  <li><a href="#xaringan-presentation" id="toc-xaringan-presentation" class="nav-link" data-scroll-target="#xaringan-presentation"><span class="header-section-number">3.2</span> Xaringan Presentation</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Learning Diary</h1>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week 2: Portfolio and Presentation Tools</span></h1>
 </div>
 
 
@@ -182,12 +196,6 @@ ul.task-list li input[type="checkbox"] {
           </div>
   </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">January 20, 2026</p>
-    </div>
-  </div>
   
     
   </div>
@@ -197,8 +205,29 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="summary-from-gui-to-code-based-workflows" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="summary-from-gui-to-code-based-workflows"><span class="header-section-number">3.1</span> Summary: From GUI to Code-based Workflows</h2>
+<p>This week marked a significant shift in my approach to data presentation: moving from GUI-based tools like Canva to a code-based workflow. The goal was to go beyond personal notes and create a “digital legacy” or a “digital twin” of my learning process that is accessible to anyone.</p>
+<section id="quarto-the-foundation-for-a-living-notebook" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="quarto-the-foundation-for-a-living-notebook"><span class="header-section-number">3.1.1</span> 1. Quarto: The Foundation for a “Living” Notebook</h3>
+<p>Quarto is a platform where text, code, and visual results coexist in a single document. Previously, I managed Python code and Word documents separately, which made updating graphs an incredibly tedious process of copying and pasting. With Quarto, the results are automatically integrated. While I initially felt frustrated by the lack of “drag-and-drop” flexibility, I soon realized that following simple rules for headings and lists allows me to focus more on the actual content rather than getting distracted by aesthetics.</p>
+</section>
+<section id="xaringan-sharing-knowledge-through-the-sharingan" class="level3" data-number="3.1.2">
+<h3 data-number="3.1.2" class="anchored" data-anchor-id="xaringan-sharing-knowledge-through-the-sharingan"><span class="header-section-number">3.1.2</span> 2. Xaringan: Sharing Knowledge through the “Sharingan”</h3>
+<p>The slide creation tool “Xaringan” was particularly intriguing. As the only Japanese student in the class, I felt an immediate connection to the name, even though I haven’t watched much <em>Naruto</em>. The tool embodies the open-source philosophy of “copying” and adapting excellent styles from others. The instant preview feature—“Infinite Tsukuyomi”—allows the screen to update the moment I save, highlighting the high-speed efficiency of programming compared to the manual exporting required in Canva.</p>
+</section>
+<section id="deploying-a-digital-twin-on-github" class="level3" data-number="3.1.3">
+<h3 data-number="3.1.3" class="anchored" data-anchor-id="deploying-a-digital-twin-on-github"><span class="header-section-number">3.1.3</span> 3. Deploying a “Digital Twin” on GitHub</h3>
+<p>An’s story about a student securing a job through their portfolio was highly motivating, especially as I am currently job hunting. Publishing this diary on GitHub feels like placing “proof of my learning” on the global stage. It allows me to showcase not just a polished final product, but the raw, trial-and-error process—such as my struggles with SNAP in Week 1—as a record of my perseverance and problem-solving.</p>
+</section>
+</section>
+<section id="xaringan-presentation" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="xaringan-presentation"><span class="header-section-number">3.2</span> Xaringan Presentation</h2>
+<p>The following presentation summarizes a specific sensor and its applications in remote sensing.</p>
+<p>xaringanExtra::embed_xaringan( url = “YOUR_XARINGAN_URL_HERE”, ratio = “16:9” —</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -603,10 +632,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./week1.html" class="pagination-link" aria-label="Practical 1: Satellite Data Exploration and Spectral Analysis">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Practical 1: Satellite Data Exploration and Spectral Analysis</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./week1.html" class="pagination-link" aria-label="Practical 1: Satellite Data Exploration and Spectral Analysis">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Practical 1: Satellite Data Exploration and Spectral Analysis</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./week3.html" class="pagination-link" aria-label="week3.html">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">week3.html</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
