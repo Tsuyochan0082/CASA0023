@@ -8,24 +8,24 @@ output: html_document
 ## Content Summary
 
 ### 1. Accuracy Validation and Optimism Bias
+
 This week’s learning began with a theoretical critique of how classification accuracy is validated. The lecture highlighted the "Optimism Bias" inherent in the Resubstitution method, where using the same samples for training and validation leads to artificially high results. In the practical, I addressed this by moving away from the 99.7% accuracy achieved in previous sessions, instead implementing a 70:30 Random Split for validation. This transition from "internal consistency" to "predictive power" ensured that the final overall accuracy of 87.5% was a scientifically robust and honest reflection of the model’s performance in a complex urban environment like London.
 
 ### 2. Object-Based Image Analysis (OBIA) via SNIC
+
 A major conceptual shift was the move from pixel-based methods to Object-Based Image Analysis (OBIA). Pixel-based classification, while straightforward, often results in "salt-and-pepper noise" because it ignores the spatial context of neighboring cells. Following the lecture’s emphasis on superpixels, I implemented the Simple Non-Iterative Clustering (SNIC) algorithm in the practical. By grouping adjacent pixels with similar spectral properties into statistical "objects," I was able to preserve the structural integrity of the urban fabric, such as the clear delineation of the River Thames and distinct urban blocks, which would have been fragmented under a pixel-only approach.
 
 ![A London map made from OBIA](img/London1.png)
 
 ### 3. Spatial Autocorrelation and Strategic Sampling
+
 The lecture introduced Tobler’s First Law of Geography, which states that near things are more related than distant things. This principle of spatial autocorrelation poses a challenge for sampling, as clustered data can lead to redundant information and over-fitted models. To operationalize this theory during the practical, I developed a strategic sampling plan by dividing the metropolis into five sectors: North, South, East, West, and Central London. By ensuring that training plots were distributed across these varied geographical contexts, the classifier captured a representative range of spectral signatures, thereby mitigating the risks associated with spatial autocorrelation.
 
 ## Application
+
 The core of this week’s learning lies in understanding how the choice between object-based and pixel-based methodologies reflects a researcher's underlying narrative and intent. Choosing whether to treat land as a collection of independent pixels or as a series of meaningful objects is not merely a technical preference; it relates directly to the "Geographical Integrity" of the researcher—specifically, which version of urban "truth" one intends to manifest. In the context of analyzing economic-geographical inequalities, this choice determines whether we perceive poverty as a fragmented spectral value or as a structural, spatial manifestation of social exclusion.
 
-
-
 When examining urban inequality through a micro-structural lens, the differentiation between these two approaches becomes starkly evident in how they define social stratification. Kohli et al. (2013) demonstrate the power of Object-Based Image Analysis (OBIA) by defining slums as physical "objects" characterized by specific geometries and textures, proving that such structural identifiers can be transferred across diverse urban contexts like Kenya and India to pinpoint marginalized areas . Conversely, the pixel-based framework discussed by Weigand et al. (2019) focuses on the correlation between socioeconomic status and environmental exposure, using metrics like impervious surface fractions and vegetation distribution to quantify "Environmental Justice" . While Kohli's OBIA approach is superior for capturing the morphological "essence" of informal settlements, it risks being sensitive to local definitions; meanwhile, the pixel-based indicators highlighted by Weigand offer higher statistical universality but may overlook the lived environmental nuances, such as how specific building shadows—which I struggled with in my practical—affect the microclimate of a neighborhood.
-
-
 
 Synthesizing these perspectives reveals that the true value of classification lies in its ability to transform raw numerical data into a "map of inequality" that informs policy. My experience with the misclassification of shadows during the practical session served as a crucial realization that "ambiguity" in data is often where the most significant urban stories are hidden; treating those shadows not as noise but as contextual objects can reveal density and living conditions invisible to simple spectral analysis. By integrating these micro-structural insights with macro-temporal patterns, such as monitoring long-term urban sprawl or post-disaster recovery speeds, remote sensing evolves from a mere observation tool into a powerful political instrument. For my future project in Manaus, this shift from pursuing "perfect accuracy" to "extracting social context" will be essential in identifying the hidden variables of informal growth and translating them into actionable blueprints for urban equity.
 
@@ -43,4 +43,4 @@ Kohli, D., Warwadekar, P., Kerle, N., Sliuzas, R. and Stein, A. (2013) ‘Transf
 
 Weigand, M., Wurm, M., Dech, S. and Taubenböck, H. (2019) ‘Remote Sensing in Environmental Justice Research—A Review’, *ISPRS International Journal of Geo-Information*, 8(1), p. 20. Available at: https://doi.org/10.3390/ijgi8010020.
 
----
+------------------------------------------------------------------------
