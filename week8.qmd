@@ -11,25 +11,16 @@ The practical focused on the Beirut explosion as a case study for SAR-based dama
 
 At the same time, an important limitation was discussed: the assumptions behind a t-test do not always perfectly match the statistical properties of SAR data. I understood this as a reminder that the method is useful, but should not be treated as automatically precise simply because it looks technical.
 
-::: {.callout-note}
-### Figure 1: Beirut Change Map / Workflow Output
-(ここにベイルートのチェンジマップ、または実習コードの出力を挿入)
-:::
+![Beirut Change Map](img/week8_img1.png)
 
 ### Application to Suzu City (Tsunami Damage)
 I then tried to apply this same workflow myself to the tsunami-affected coastal area of Suzu City. I was able to generate both a change map and a building-level change map, but the result did not produce a clear and concentrated damage pattern in the same way as the Beirut example. Instead, the mapped changes appeared more as a narrow band along the coastline, around settlements and port areas. 
 
 This made me realise that SAR was not directly showing “damage itself,” but rather highlighting where backscatter had changed significantly. In a tsunami setting, this distinction seems especially important, because damage may involve flooding, internal structural damage, or low-level destruction that does not necessarily appear as a dramatic top-down shape change. For that reason, I came to see SAR as a very effective tool for rapid, broad post-disaster assessment, but not as a definitive map of damage. Its outputs need to be interpreted more carefully as change candidate maps, rather than final damage maps.
 
-::: {.callout-note}
-### Figure 2: Suzu Change Map
-(ここに珠洲市のチェンジマップを挿入)
-:::
+![Figure 2: Suzu Map](img/week8_img3.png)
 
-::: {.callout-note}
-### Figure 3: Building-level Suzu Map
-(ここに珠洲市の建物レベルの集計マップを挿入。Figure 2と比較できるように配置)
-:::
+![Figure 3: Building-level Suzu Map](img/week8_img2.png)
 
 ## 2. Application: Integration with Other Data Sources
 
@@ -52,4 +43,8 @@ What stood out to me most this week was that I began to understand SAR not as a 
 At the same time, I do not think this makes the method weak. On the contrary, its value lies in being able to identify broad areas of major change very quickly and indicate where further investigation should be prioritised. In a country like Japan, where earthquakes, tsunamis, and volcanic hazards are constant concerns, I think this makes SAR a highly relevant and necessary technology. If future disasters such as a Nankai Trough earthquake or a Mount Fuji eruption are considered, the ability to gain a rapid synoptic view of likely damage before full ground access is possible seems especially important.
 
 Moreover, the practical also reminded me that satellite data alone can never fully replace on-the-ground understanding. One of the clearest lessons for me was that even a technically impressive SAR output is still not the same thing as reality itself. It can guide attention, but it cannot by itself confirm the full nature of what has happened. For that reason, I think it is essential that remote sensing outputs are always connected back to field observation. What I learned this week was not only the technical potential of SAR, but also the importance of linking large-scale synoptic data with grounded, local evidence.
+
+## Reference
+Ge, P., Gokon, H. and Meguro, K. (2020) ‘A review on synthetic aperture radar-based building damage assessment in disasters’, Remote Sensing of Environment, 240, p. 111693. Available at:
+Imran, M., Alam, F., Qazi, U., Ofli, F. and Imran, M. (2020) ‘Rapid damage assessment using social media images by combining human and machine intelligence’, in Proceedings of the 17th International Conference on Information Systems for Crisis Response and Management (ISCRAM 2020), pp. 761–773. Available at:
 ---
