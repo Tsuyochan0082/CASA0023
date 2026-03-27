@@ -1,0 +1,41 @@
+# Table of Contents
+
+This diary explores my reflections on the methods covered in class, with a particular focus on how remote sensing can support broader geographical inquiry.
+
+At this stage, I am still a beginner in remote sensing. While I do not yet have extensive technical experience, I am especially interested in understanding the algorithms behind methods that seem to provide a broad, bird’s-eye perspective on the earth’s surface, particularly terrain scanning and related forms of topographic observation. I am curious not only about what these techniques can show, but also about how they work, what kinds of assumptions they rely on, and what their limitations may be.
+
+Through this course, I hope to learn methods that will deepen my academic understanding of economic geography. In particular, I am interested in how remote sensing and spatial analysis can help reveal patterns of land use, infrastructure, development, regional inequality, and human-environment relations. I therefore see this diary not only as a record of weekly learning, but also as a place to connect course methods to the kinds of questions I hope to pursue more seriously in the future.
+
+Each week, I will reflect on the key themes, methods, and questions raised in class, while gradually building my own understanding of how these techniques may be applied in geographical research.
+
+## Week 1
+
+-   [Introduction to Remote Sensing](Week1.qmd)
+
+## Week 2
+
+-   [Quarto Books and Xaringan Presentations](Week2.qmd)
+
+## Week 3
+
+-   [Corrections and Enhancements](Week3.qmd)
+
+## Week 4
+
+-   [Project Case Study](Week4.qmd)
+
+## Week 5
+
+-   [Introduction to Google Earth Engine](Week5.qmd)
+
+## Week 6
+
+-   [Remote Sensing and Machine Learning](Week6.qmd)
+
+## Week 7
+
+-   [Sub-Pixel and OBIA Classification](Week7.qmd)
+
+## Week 8
+
+-   [SAR Damage Detection](Week8.qmd)

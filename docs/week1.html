@@ -72,6 +72,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -84,7 +113,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week1.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Practical 1: Satellite Data Exploration and Spectral Analysis</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week1.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Satellite Data Exploration and Spectral Analysis</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -112,13 +141,13 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">index.html</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Table of Contents</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week1.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Practical 1: Satellite Data Exploration and Spectral Analysis</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Satellite Data Exploration and Spectral Analysis</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -130,13 +159,13 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">week3.html</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Remotely Sensing Cities and Environments</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">week4.html</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Learning Diary: Week 4</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -155,6 +184,12 @@ ul.task-list li input[type="checkbox"] {
   <div class="sidebar-item-container"> 
   <a href="./week7.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Week 7 Learning Diary:</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Learning Diary - Week 8: SAR</span></span></a>
   </div>
 </li>
     </ul>
@@ -204,8 +239,9 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="content-summary" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="content-summary"><span class="header-section-number">2.1</span> Content Summary</h2>
-<p>This week’s lecture and practical introduced the fundamental pipeline of Remote Sensing (RS), focusing on how electromagnetic energy reflected from the Earth’s surface is recorded and quantified. We explored the “four resolutions” (Spatial, Spectral, Radiometric, and Temporal) as a MECE framework to evaluate data validity. A key takeaway was understanding RS as a dynamic data stream capable of visualizing social inequalities or environmental risks through wavelengths beyond human perception, such as infrared.</p>
-<p>In the practical, I utilized QGIS and SNAP to examine the spatial and spectral characteristics of Sentinel-2 and Landsat imagery. The primary focus was constructing a “Virtual Raster” in QGIS. This step was crucial not just for image management, but for understanding that satellite data is a stack of information across various spectral bands rather than a static photograph. A significant portion of the exercise involved comparing Sentinel-2 (10m) and Landsat-8 (30m) resolutions over Central London. At 10m, urban features like street outlines and small parks are clearly identifiable. In contrast, the 30m resolution results in a “Mixed Pixel” phenomenon, where the spectral reflectance of multiple land covers (e.g., concrete and grass) merges into single pixels, obscuring the boundaries of the urban fabric. Later, I used SNAP’s Spectrum View to analyze “Spectral Signatures,” specifically identifying the “Red-edge” effect in vegetation. This sharp increase in Near-Infrared (NIR) reflectance provides the logical basis for automated land-cover classification.</p>
+<p>This week’s lecture and practical introduced the fundamental pipeline of Remote Sensing (RS), focusing on how electromagnetic energy reflected from the Earth’s surface is recorded and quantified. We explored the “four resolutions” (Spatial, Spectral, Radiometric, and Temporal) as a MECE framework to evaluate data validity. Fundamental to this recording is the physical property of electromagnetic radiation (EMR), which propagates as waves consisting of perpendicular electric and magnetic fields. Understanding the mathematical relationship between the velocity of light (<span class="math inline">\(c \approx 3 \times 10^8\)</span> m/s), frequency (<span class="math inline">\(\nu\)</span>), and wavelength (<span class="math inline">\(\lambda\)</span>), expressed as <span class="math inline">\(c = \nu\lambda\)</span>, is essential for defining the specific spectral bands that sensors are designed to capture.</p>
+<p>However, the path from the sun to the sensor is not a vacuum; EMR interacts significantly with the atmosphere through scattering and absorption. We examined three types of atmospheric scattering: Rayleigh (particles smaller than wavelength), Mie (particles equal to wavelength), and non-selective (particles larger than wavelength). Rayleigh scattering explains why shorter blue wavelengths scatter more easily—a phenomenon that necessitates atmospheric correction to ensure data accuracy. Figure1 which showed in the class illustrates the complex interactions, including scattering and absorption by aerosols and molecules, that EMR undergoes before reaching the sensor. !<a href="scattering.jpg">Atmospheric Propagation Effects: Interactions including scattering and absorption by aerosols and molecules</a>Furthermore, we must account for “atmospheric windows,” as molecules like water vapor, ozone, and <span class="math inline">\(CO_2\)</span> block large portions of the spectrum, limiting our observations to specific wavelengths where the atmosphere is transparent. A key takeaway was understanding RS as a dynamic data stream capable of visualizing social inequalities or environmental risks through wavelengths beyond human perception, such as infrared.</p>
+<p>In the practical, I utilized QGIS and SNAP to examine the spatial and spectral characteristics of Sentinel-2 and Landsat imagery. The primary focus was constructing a “Virtual Raster” in QGIS. This step was crucial not just for image management, but for understanding that satellite data is a stack of information across various spectral bands rather than a static photograph. The sensitivity of these recordings is dictated by radiometric resolution; while an 8-bit sensor identifies only 256 possible values, higher bit-depths (e.g., Sentinel-2’s 12-bit) allow for identifying much finer differences in reflectance. A significant portion of the exercise involved comparing Sentinel-2 (10m) and Landsat-8 (30m) resolutions over Central London. At 10m, urban features like street outlines and small parks are clearly identifiable. In contrast, the 30m resolution results in a “Mixed Pixel” phenomenon, where the spectral reflectance of multiple land covers (e.g., concrete and grass) merges into single pixels, obscuring the boundaries of the urban fabric. Later, I used SNAP’s Spectrum View to analyze “Spectral Signatures,” specifically identifying the “Red-edge” effect in vegetation. This sharp increase in Near-Infrared (NIR) reflectance provides the logical basis for automated land-cover classification.</p>
 <div id="fig-sentinel" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-sentinel-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -651,8 +687,8 @@ Figure&nbsp;2.2: <strong>Landsat-8 (30m) resolution over Central London. Spatial
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link" aria-label="index.html">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">index.html</span></span>
+      <a href="./index.html" class="pagination-link" aria-label="Table of Contents">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Table of Contents</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

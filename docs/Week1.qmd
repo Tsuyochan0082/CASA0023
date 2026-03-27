@@ -16,23 +16,21 @@ However, the path from the sun to the sensor is not a vacuum; EMR interacts sign
 
 In the practical, I utilized QGIS and SNAP to examine the spatial and spectral characteristics of Sentinel-2 and Landsat imagery. The primary focus was constructing a "Virtual Raster" in QGIS. This step was crucial not just for image management, but for understanding that satellite data is a stack of information across various spectral bands rather than a static photograph. A significant portion of the exercise involved comparing Sentinel-2 (10m) and Landsat-8 (30m) (Figure1 & Figure2) resolutions over Central London. At 10m, urban features like street outlines and small parks are clearly identifiable. In contrast, the 30m resolution results in a "Mixed Pixel" phenomenon, where the spectral reflectance of multiple land covers (e.g., concrete and grass) merges into single pixels, obscuring the boundaries of the urban fabric. Later, I used SNAP's Spectrum View to analyze "Spectral Signatures," specifically identifying the "Red-edge" effect in vegetation. This sharp increase in Near-Infrared (NIR) reflectance provides the logical basis for automated land-cover classification.
 
-::: {layout-ncol="2"}
+``` markdown
+::: {layout-ncol=2}
 ![**Figure1: Sentinel-2 (10m) resolution over Central London. Roads and individual buildings are clearly identifiable.**](img/week1.10m.png){#fig-sentinel}
 
 ![**Figure2: Landsat-8 (30m) resolution over Central London. Spatial details are blurred into "Mixed Pixels."**](img/week1.30m.png){#fig-landsat}
 :::
+```
 
 ## Applications
 
 This week’s introduction to remote sensing highlights how spatial and spectral resolution transition from theoretical concepts to vital tools for environmental justice. I have selected two studies that demonstrate this transition through contrasting scales.
 
-**Comparison of Macro and Micro Perspectives:**
+**Comparison of Macro and Micro Perspectives:** @wolch_urban_2014 provide a macro-level perspective, arguing that urban greening can paradoxically lead to "environmental gentrification" and the displacement of low-income residents. This demonstrates that time-series RS data is a crucial indicator for capturing broad social dynamics over decades. In contrast, @gascon_residential_2016 focus on a micro-level perspective regarding individual health. Here, the 10m resolution of Sentinel-2 is indispensable. Unlike the 30m resolution of Landsat, this technology captures "micro-scale greenery" like street trees and pocket parks. These elements were previously "invisible" to sensors but are essential for understanding daily human exposure to nature.
 
-@wolch_urban_2014 provide a macro-level perspective, arguing that urban greening can paradoxically lead to "environmental gentrification" and the displacement of low-income residents. This demonstrates that time-series RS data is a crucial indicator for capturing broad social dynamics over decades. In contrast, @gascon_residential_2016 focus on a micro-level perspective regarding individual health. Here, the 10m resolution of Sentinel-2 is indispensable. Unlike the 30m resolution of Landsat, this technology captures "micro-scale greenery" like street trees and pocket parks. These elements were previously "invisible" to sensors but are essential for understanding daily human exposure to nature.
-
-**Synthesis and Future Implementation:**
-
-Integrating these perspectives shows that high spatial resolution is a requirement for environmental justice rather than a technical luxury. By overlaying high-resolution environmental indicators with demographic data, we can logically visualize the "green gap" in vulnerable neighborhoods. This synthesis of macro-social trends (gentrification) and micro-spatial precision (exposure) is central to my own research interests. I intend to apply this dual-scale approach to future projects, possibly examining urban inequality in London or rapidly developing cities in Southeast Asia, where fine-grained resource distribution is the key to effective policy interventions.
+**Synthesis and Future Implementation:** Integrating these perspectives shows that high spatial resolution is a requirement for environmental justice rather than a technical luxury. By overlaying high-resolution environmental indicators with demographic data, we can logically visualize the "green gap" in vulnerable neighborhoods. This synthesis of macro-social trends (gentrification) and micro-spatial precision (exposure) is central to my own research interests. I intend to apply this dual-scale approach to future projects, possibly examining urban inequality in London or rapidly developing cities in Southeast Asia, where fine-grained resource distribution is the key to effective policy interventions.
 
 ## Reflection
 

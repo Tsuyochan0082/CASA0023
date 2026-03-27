@@ -7,6 +7,7 @@ book:
   author: "Tsuyoshi Choh"
   date: "1/20/2026"
   chapters:
+    - index.qmd
     - week1.qmd
     - week2.qmd
     - week3.qmd
@@ -14,6 +15,7 @@ book:
     - week5.qmd
     - week6.qmd
     - week7.qmd
+    - week8.qmd
 
 bibliography: references.bib
 
