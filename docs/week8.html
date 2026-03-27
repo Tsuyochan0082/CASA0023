@@ -1,15 +1,13 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
-<head>
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
 
-<meta charset="utf-8" />
-<meta name="generator" content="quarto-1.8.27" />
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>3  Portfolio and Xaringan – Learning Diary</title>
+<title>9&nbsp; SAR Data and Damage Detection – Learning Diary</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,9 +20,48 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
-<!-- htmldependencies:E3FAD763 -->
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./week7.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-27c261d06b905028a18691de25d09dde.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -52,27 +89,21 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script src="site_libs/fitvids-2.1.1/fitvids.min.js"></script>
 
 
 </head>
 
-<body>
+<body class="nav-sidebar floating quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn"
-      data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" 
-      aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation"
-      onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <h1 class="quarto-secondary-nav-title no-breadcrumbs"></h1>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" role="link"
-        aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation"
-        onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week8.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">SAR Data and Damage Detection</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
@@ -86,9 +117,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="/">
-      Learning Diary
-      </a> 
+      <a href="./">Learning Diary</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -100,72 +129,87 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class='chapter-number'>1</span>  <span class='chapter-title'>Table of Contents</span></span></a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Table of Contents</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/week1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class='chapter-number'>2</span>  <span class='chapter-title'>intro to remote sensing</span></span></a>
+  <a href="./week1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">intro to remote sensing</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/week2.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class='chapter-number'>3</span>  <span class='chapter-title'>Portfolio and Xaringan</span></span></a>
+  <a href="./week2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Portfolio and Xaringan</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/week3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class='chapter-number'>4</span>  <span class='chapter-title'>Image Correction and Spectral Enhancement</span></span></a>
+  <a href="./week3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Image Correction and Spectral Enhancement</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/week4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class='chapter-number'>5</span>  <span class='chapter-title'>Policy (individual case study: flood system in Ho-Chi-Min City)</span></span></a>
+  <a href="./week4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Policy (individual case study: flood system in Ho-Chi-Minh City)</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/week5.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class='chapter-number'>6</span>  <span class='chapter-title'>Cloud Computing and Google Earth Engine</span></span></a>
+  <a href="./week5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Cloud Computing and Google Earth Engine</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/week6.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class='chapter-number'>7</span>  <span class='chapter-title'>Machine Learning and Land Cover Classification</span></span></a>
+  <a href="./week6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Machine Learning and Land Cover Classification</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/week7.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class='chapter-number'>8</span>  <span class='chapter-title'>Sub-pixel and OBIA Classification</span></span></a>
+  <a href="./week7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Sub-pixel and OBIA Classification</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/week8.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class='chapter-number'>9</span>  <span class='chapter-title'>SAR Data and Damage Detection</span></span></a>
+  <a href="./week8.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">SAR Data and Damage Detection</span></span></a>
   </div>
 </li>
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" ></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <div id="quarto-toc-target"></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#summary-sar-based-change-detection-and-the-beirut-case-study" id="toc-summary-sar-based-change-detection-and-the-beirut-case-study" class="nav-link active" data-scroll-target="#summary-sar-based-change-detection-and-the-beirut-case-study"><span class="header-section-number">9.1</span> Summary: SAR-based Change Detection and the Beirut Case Study</a>
+  <ul class="collapse">
+  <li><a href="#application-to-suzu-city-tsunami-damage" id="toc-application-to-suzu-city-tsunami-damage" class="nav-link" data-scroll-target="#application-to-suzu-city-tsunami-damage"><span class="header-section-number">9.1.1</span> Application to Suzu City (Tsunami Damage)</a></li>
+  </ul></li>
+  <li><a href="#application-integration-with-other-data-sources" id="toc-application-integration-with-other-data-sources" class="nav-link" data-scroll-target="#application-integration-with-other-data-sources"><span class="header-section-number">9.2</span> Application: Integration with Other Data Sources</a>
+  <ul class="collapse">
+  <li><a href="#combination-with-optical-imagery" id="toc-combination-with-optical-imagery" class="nav-link" data-scroll-target="#combination-with-optical-imagery"><span class="header-section-number">9.2.1</span> Combination with Optical Imagery</a></li>
+  <li><a href="#combination-with-social-media-data" id="toc-combination-with-social-media-data" class="nav-link" data-scroll-target="#combination-with-social-media-data"><span class="header-section-number">9.2.2</span> Combination with Social Media Data</a></li>
+  </ul></li>
+  <li><a href="#reflection-the-value-of-sar-in-disaster-management" id="toc-reflection-the-value-of-sar-in-disaster-management" class="nav-link" data-scroll-target="#reflection-the-value-of-sar-in-disaster-management"><span class="header-section-number">9.3</span> Reflection: The Value of SAR in Disaster Management</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">3</span>  <span class="chapter-title">Portfolio and Xaringan</span></h1>
+<h1 class="title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">SAR Data and Damage Detection</span></h1>
 </div>
 
 
@@ -181,56 +225,73 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<nav id="TOC" role="doc-toc">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#summary-from-gui-to-code-based-workflows" id="toc-summary-from-gui-to-code-based-workflows"><span class="header-section-number">3.1</span> Summary: From GUI to Code-based Workflows</a>
-  <ul>
-  <li><a href="#quarto-the-foundation-for-a-living-notebook" id="toc-quarto-the-foundation-for-a-living-notebook"><span class="header-section-number">3.1.1</span> Quarto: The Foundation for a “Living” Notebook</a></li>
-  <li><a href="#xaringan-sharing-knowledge-through-the-sharingan" id="toc-xaringan-sharing-knowledge-through-the-sharingan"><span class="header-section-number">3.1.2</span> Xaringan: Sharing Knowledge through the “Sharingan”</a></li>
-  <li><a href="#deploying-a-digital-twin-on-github" id="toc-deploying-a-digital-twin-on-github"><span class="header-section-number">3.1.3</span> Deploying a “Digital Twin” on GitHub</a></li>
-  </ul></li>
-  <li><a href="#xaringan-presentation" id="toc-xaringan-presentation"><span class="header-section-number">3.2</span> Xaringan Presentation</a></li>
-  </ul>
-</nav>
-<section id="summary-from-gui-to-code-based-workflows" class="level2" data-number="3.1">
-<h2 data-number="3.1"><span class="header-section-number">3.1</span> Summary: From GUI to Code-based Workflows</h2>
-<p>This week marked a significant shift in my approach to data presentation: moving from GUI-based tools like Canva to a code-based workflow. The goal was to go beyond personal notes and create a “digital legacy” or a “digital twin” of my learning process that is accessible to anyone.</p>
-<section id="quarto-the-foundation-for-a-living-notebook" class="level3" data-number="3.1.1">
-<h3 data-number="3.1.1"><span class="header-section-number">3.1.1</span> Quarto: The Foundation for a “Living” Notebook</h3>
-<p>Quarto is a platform where text, code, and visual results coexist in a single document. Previously, I managed Python code and Word documents separately, which made updating graphs an incredibly tedious process of copying and pasting. With Quarto, the results are automatically integrated. While I initially felt frustrated by the lack of “drag-and-drop” flexibility, I soon realized that following simple rules for headings and lists allows me to focus more on the actual content rather than getting distracted by aesthetics.</p>
-</section>
-<section id="xaringan-sharing-knowledge-through-the-sharingan" class="level3" data-number="3.1.2">
-<h3 data-number="3.1.2"><span class="header-section-number">3.1.2</span> Xaringan: Sharing Knowledge through the “Sharingan”</h3>
-<p>The slide creation tool “Xaringan” was particularly intriguing. As the only Japanese student in the class, I felt an immediate connection to the name, even though I haven’t watched much <em>Naruto</em>. The tool embodies the open-source philosophy of “copying” and adapting excellent styles from others. The instant preview feature allows the screen to update the moment I save, highlighting the speed and efficiency of programming compared to the manual exporting required in Canva.</p>
-</section>
-<section id="deploying-a-digital-twin-on-github" class="level3" data-number="3.1.3">
-<h3 data-number="3.1.3"><span class="header-section-number">3.1.3</span> Deploying a “Digital Twin” on GitHub</h3>
-<p>Andy’s story about a student securing a job through their portfolio was highly motivating, especially as I am currently job hunting. Publishing this diary on GitHub feels like placing “proof of my learning” on the global stage. It allows me to showcase not just a polished final product, but the raw, trial and error process (such as my struggles with SNAP in Week 1) as a record of my perseverance and problem-solving.</p>
-</section>
-</section>
-<section id="xaringan-presentation" class="level2" data-number="3.2">
-<h2 data-number="3.2"><span class="header-section-number">3.2</span> Xaringan Presentation</h2>
-<p>The following presentation summarizes a specific sensor and its applications in remote sensing.</p>
-<div class="cell">
-<div class="cell-output-display">
-<div class="shareagain" style="min-width:300px;margin:1em auto;" data-exeternal="1">
-<iframe src="file:///Users/chohtsuyoshi/Desktop/CASA0023/Xaringan.html" width="1600" height="900" style="border:2px solid currentColor;" loading="lazy" allowfullscreen></iframe>
-<script>fitvids('.shareagain', {players: 'iframe'});</script>
+
+<section id="summary-sar-based-change-detection-and-the-beirut-case-study" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="summary-sar-based-change-detection-and-the-beirut-case-study"><span class="header-section-number">9.1</span> Summary: SAR-based Change Detection and the Beirut Case Study</h2>
+<p>The practical focused on the Beirut explosion as a case study for SAR-based damage detection. Instead of relying on a simple before-and-after comparison, the workflow used multiple pre-event and post-event Sentinel-1 images to calculate the mean and standard deviation of each pixel, and then applied a pixel-wise t-test to identify statistically significant change.(Figure1) The lecture also introduced the idea of using ROC curves to evaluate whether change detection results are actually reliable, which made it clear that producing an output map is not enough on its own and that validation matters.</p>
+<p>At the same time, an important limitation was discussed: <strong>the assumptions behind a t-test do not always perfectly match the statistical properties of SAR data</strong>. I understood this as a reminder that the method is useful, but should not be treated as automatically precise simply because it looks technical.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/week8_img1.png" class="img-fluid figure-img"></p>
+<figcaption>Figure1:Change detection of Beirut Explosion</figcaption>
+</figure>
+</div>
+<section id="application-to-suzu-city-tsunami-damage" class="level3" data-number="9.1.1">
+<h3 data-number="9.1.1" class="anchored" data-anchor-id="application-to-suzu-city-tsunami-damage"><span class="header-section-number">9.1.1</span> Application to Suzu City (Tsunami Damage)</h3>
+<p>I then tried to apply this same workflow myself to the tsunami-affected coastal area of Suzu City. I was able to generate both a change map and a building-level change map(Figure2 &amp; Figure3), but the result did not produce a clear and concentrated damage pattern in the same way as the Beirut example. Instead, the mapped changes appeared more as a narrow band along the coastline, around settlements and port areas. This pattern reflects the physical principle behind SAR: calm water surfaces reflect radar pulses away from the sensor through specular reflection, appearing dark, while tsunami debris or damaged structures increase backscatter intensity. In other words, SAR was not directly showing “damage itself” but rather highlighting where backscatter had changed significantly. In a tsunami setting, this distinction seems especially important, because damage may involve flooding, internal structural damage, or low-level destruction that does not necessarily appear as a dramatic top-down shape change. I also had to be mindful that while GEE provides Sentinel-1 C-band data in dB scale for visualisation, statistical analysis like the t-test should ideally consider the underlying distribution of the data. For that reason, I came to see SAR as a very effective tool for <strong>rapid, broad post-disaster assessment, but not as a definitive map of damage</strong>. Its outputs need to be interpreted more carefully as change candidate maps, rather than final damage maps.</p>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/week8_img4.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 2: Suzu Map</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/week8_img2.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 3: Building-level Chnage Candidates in Suzu Map</figcaption>
+</figure>
 </div>
 </div>
 </div>
-<div id="quarto-navigation-envelope" class="hidden">
-<p><span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyLXRpdGxl">Learning Diary</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXItdGl0bGU=">Learning Diary</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uZXh0"><span class="chapter-number">4</span>  <span class="chapter-title">Image Correction and Spectral Enhancement</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1wcmV2"><span class="chapter-number">2</span>  <span class="chapter-title">intro to remote sensing</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9pbmRleC5odG1sPHNwYW4tY2xhc3M9J2NoYXB0ZXItbnVtYmVyJz4xPC9zcGFuPi0tPHNwYW4tY2xhc3M9J2NoYXB0ZXItdGl0bGUnPlRhYmxlLW9mLUNvbnRlbnRzPC9zcGFuPg=="><span class="chapter-number">1</span>  <span class="chapter-title">Table of Contents</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi93ZWVrMS5odG1sPHNwYW4tY2xhc3M9J2NoYXB0ZXItbnVtYmVyJz4yPC9zcGFuPi0tPHNwYW4tY2xhc3M9J2NoYXB0ZXItdGl0bGUnPmludHJvLXRvLXJlbW90ZS1zZW5zaW5nPC9zcGFuPg=="><span class="chapter-number">2</span>  <span class="chapter-title">intro to remote sensing</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi93ZWVrMi5odG1sPHNwYW4tY2xhc3M9J2NoYXB0ZXItbnVtYmVyJz4zPC9zcGFuPi0tPHNwYW4tY2xhc3M9J2NoYXB0ZXItdGl0bGUnPlBvcnRmb2xpby1hbmQtWGFyaW5nYW48L3NwYW4+"><span class="chapter-number">3</span>  <span class="chapter-title">Portfolio and Xaringan</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi93ZWVrMy5odG1sPHNwYW4tY2xhc3M9J2NoYXB0ZXItbnVtYmVyJz40PC9zcGFuPi0tPHNwYW4tY2xhc3M9J2NoYXB0ZXItdGl0bGUnPkltYWdlLUNvcnJlY3Rpb24tYW5kLVNwZWN0cmFsLUVuaGFuY2VtZW50PC9zcGFuPg=="><span class="chapter-number">4</span>  <span class="chapter-title">Image Correction and Spectral Enhancement</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi93ZWVrNC5odG1sPHNwYW4tY2xhc3M9J2NoYXB0ZXItbnVtYmVyJz41PC9zcGFuPi0tPHNwYW4tY2xhc3M9J2NoYXB0ZXItdGl0bGUnPlBvbGljeS0oaW5kaXZpZHVhbC1jYXNlLXN0dWR5Oi1mbG9vZC1zeXN0ZW0taW4tSG8tQ2hpLU1pbi1DaXR5KTwvc3Bhbj4="><span class="chapter-number">5</span>  <span class="chapter-title">Policy (individual case study: flood system in Ho-Chi-Min City)</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi93ZWVrNS5odG1sPHNwYW4tY2xhc3M9J2NoYXB0ZXItbnVtYmVyJz42PC9zcGFuPi0tPHNwYW4tY2xhc3M9J2NoYXB0ZXItdGl0bGUnPkNsb3VkLUNvbXB1dGluZy1hbmQtR29vZ2xlLUVhcnRoLUVuZ2luZTwvc3Bhbj4="><span class="chapter-number">6</span>  <span class="chapter-title">Cloud Computing and Google Earth Engine</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi93ZWVrNi5odG1sPHNwYW4tY2xhc3M9J2NoYXB0ZXItbnVtYmVyJz43PC9zcGFuPi0tPHNwYW4tY2xhc3M9J2NoYXB0ZXItdGl0bGUnPk1hY2hpbmUtTGVhcm5pbmctYW5kLUxhbmQtQ292ZXItQ2xhc3NpZmljYXRpb248L3NwYW4+"><span class="chapter-number">7</span>  <span class="chapter-title">Machine Learning and Land Cover Classification</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi93ZWVrNy5odG1sPHNwYW4tY2xhc3M9J2NoYXB0ZXItbnVtYmVyJz44PC9zcGFuPi0tPHNwYW4tY2xhc3M9J2NoYXB0ZXItdGl0bGUnPlN1Yi1waXhlbC1hbmQtT0JJQS1DbGFzc2lmaWNhdGlvbjwvc3Bhbj4="><span class="chapter-number">8</span>  <span class="chapter-title">Sub-pixel and OBIA Classification</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi93ZWVrOC5odG1sPHNwYW4tY2xhc3M9J2NoYXB0ZXItbnVtYmVyJz45PC9zcGFuPi0tPHNwYW4tY2xhc3M9J2NoYXB0ZXItdGl0bGUnPlNBUi1EYXRhLWFuZC1EYW1hZ2UtRGV0ZWN0aW9uPC9zcGFuPg=="><span class="chapter-number">9</span>  <span class="chapter-title">SAR Data and Damage Detection</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWJyZWFkY3J1bWJzLTxzcGFuLWNsYXNzPSdjaGFwdGVyLW51bWJlcic+Mzwvc3Bhbj4tLTxzcGFuLWNsYXNzPSdjaGFwdGVyLXRpdGxlJz5Qb3J0Zm9saW8tYW5kLVhhcmluZ2FuPC9zcGFuPg=="><span class="chapter-number">3</span>  <span class="chapter-title">Portfolio and Xaringan</span></span></p>
 </div>
-<div id="quarto-meta-markdown" class="hidden">
-<p><span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLW1ldGF0aXRsZQ=="><span class="chapter-number">3</span>  <span class="chapter-title">Portfolio and Xaringan</span> – Learning Diary</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLXR3aXR0ZXJjYXJkdGl0bGU="><span class="chapter-number">3</span>  <span class="chapter-title">Portfolio and Xaringan</span> – Learning Diary</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLW9nY2FyZHRpdGxl"><span class="chapter-number">3</span>  <span class="chapter-title">Portfolio and Xaringan</span> – Learning Diary</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLW1ldGFzaXRlbmFtZQ==">Learning Diary</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLXR3aXR0ZXJjYXJkZGVzYw=="></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLW9nY2FyZGRkZXNj"></span></p>
+</section>
+</section>
+<section id="application-integration-with-other-data-sources" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="application-integration-with-other-data-sources"><span class="header-section-number">9.2</span> Application: Integration with Other Data Sources</h2>
+<p>Having worked through this practical, I initially saw SAR-based change detection as a technique that could directly show damage itself. However, I came to feel that it actually functions more as a foundational dataset: it rapidly shows, at a broad spatial scale, where major change has occurred, and in doing so helps guide subsequent investigation and decision-making.</p>
+<section id="combination-with-optical-imagery" class="level3" data-number="9.2.1">
+<h3 data-number="9.2.1" class="anchored" data-anchor-id="combination-with-optical-imagery"><span class="header-section-number">9.2.1</span> Combination with Optical Imagery</h3>
+<p>The most typical combination is with optical imagery. SAR is less constrained by weather conditions or time of day, making it useful for rapidly identifying change immediately after a disaster, whereas optical imagery allows damage to be understood more intuitively. In their review, Ge et al.&nbsp;(<span class="citation" data-cites="ge2020">Ge, Gokon, and Meguro (<a href="#ref-ge2020" role="doc-biblioref">2020</a>)</span>) explain that SAR offers <strong>strengths in spatial coverage, timeliness, and all-weather capability, while having limitations in visual interpretability</strong>, which makes its complementary use with optical imagery especially important. Beyond simple visual comparison, more advanced fusion approaches can be employed: for instance, an IHS transformation replaces the intensity component of an optical RGB image with SAR backscatter, effectively combining human-intuitive color with radar’s structural detail, directly addressing the visual interpretability limitation noted by Ge et al.</p>
+</section>
+<section id="combination-with-social-media-data" class="level3" data-number="9.2.2">
+<h3 data-number="9.2.2" class="anchored" data-anchor-id="combination-with-social-media-data"><span class="header-section-number">9.2.2</span> Combination with Social Media Data</h3>
+<p>Among many other possible combinations, the one I found most interesting was the use of social media imagery. Satellite imagery is inevitably synoptic: <strong>it can show where major change has occurred, but it cannot always fully capture how damage was actually experienced on the ground.</strong> In their study of Hurricane Dorian, Imran et al.&nbsp;(<span class="citation" data-cites="imran2020">Imran et al. (<a href="#ref-imran2020" role="doc-biblioref">2020</a>)</span>) present a framework in which images posted on Twitter were collected and processed through a combination of human and machine classification. What I found especially convincing was the idea that social data can supplement the on-the-ground view that synoptic datasets like SAR cannot fully provide. However, filtering and classification are essential, and social data involve issues such as spatial bias and misinformation, making it most realistic to treat SAR as a synoptic indicator of where attention should be focused, with optical or social media imagery then explaining what was actually happening there.</p>
+</section>
+</section>
+<section id="reflection-the-value-of-sar-in-disaster-management" class="level2" data-number="9.3">
+<h2 data-number="9.3" class="anchored" data-anchor-id="reflection-the-value-of-sar-in-disaster-management"><span class="header-section-number">9.3</span> Reflection: The Value of SAR in Disaster Management</h2>
+<p>What stood out to me most this week was that I began to understand SAR not as a technology that produces a complete and final picture of damage, but as <strong>a form of foundational information that can support decision-making immediately after a disaster</strong>. Before doing the practical, the output of change detection looked to me like it could simply be read as a damage map. However, when I applied the workflow myself to the tsunami-affected area of Suzu, I realised that SAR is really showing statistically significant changes in backscatter, and that interpreting those changes still requires caution.</p>
+<p>At the same time, I do not think this makes the method weak. On the contrary, its value lies in being able to identify broad areas of major change very quickly and indicate where further investigation should be prioritised. In a country like Japan, where earthquakes, tsunamis, and volcanic hazards are constant concerns, I think this makes SAR a highly relevant and necessary technology. If future disasters such as a Nankai Trough earthquake or a Mount Fuji eruption are considered, the ability to gain a rapid synoptic view of likely damage before full ground access is possible seems especially important.</p>
+<p>Moreover, the practical also reminded me that <strong>satellite data alone can never fully replace on-the-ground understanding</strong>. One of the clearest lessons for me was that even a technically impressive SAR output is still not the same thing as reality itself. It can guide attention, but it cannot by itself confirm the full nature of what has happened. For that reason, I think it is essential that <strong>remote sensing outputs are always connected back to field observation</strong>. What I learned this week was not only the technical potential of SAR, but also the importance of linking large-scale synoptic data with grounded, local evidence.</p>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-ge2020" class="csl-entry" role="listitem">
+Ge, Pingping, Hiroaki Gokon, and Kimiro Meguro. 2020. <span>“A Review on Synthetic Aperture Radar-Based Building Damage Assessment in Disasters.”</span> <em>Remote Sensing of Environment</em> 240: 111693. <a href="https://doi.org/10.1016/j.rse.2020.111693">https://doi.org/10.1016/j.rse.2020.111693</a>.
+</div>
+<div id="ref-imran2020" class="csl-entry" role="listitem">
+Imran, Muhammad, Firoj Alam, Umair Qazi, Steve Peterson, and Ferda Ofli. 2020. <span>“Rapid Damage Assessment Using Social Media Images by Combining Human and Machine Intelligence.”</span> In <em>Proceedings of the 17th ISCRAM Conference</em>, 1–13. Blacksburg, VA, USA. <a href="https://mimran.me/papers/rapid_damage_assessment_using_sm_images_dorian_ISCRAM2020.pdf">https://mimran.me/papers/rapid_damage_assessment_using_sm_images_dorian_ISCRAM2020.pdf</a>.
+</div>
 </div>
 </section>
 
 </main> <!-- /main -->
-<script id = "quarto-html-after-body" type="application/javascript">
+<script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
     const anchorJS = new window.AnchorJS();
@@ -632,18 +693,16 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a  href="/week1.html" class="pagination-link" aria-label="intro to remote sensing">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class='chapter-number'>2</span>  <span class='chapter-title'>intro to remote sensing</span></span>
+      <a href="./week7.html" class="pagination-link" aria-label="Sub-pixel and OBIA Classification">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Sub-pixel and OBIA Classification</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a  href="/week3.html" class="pagination-link" aria-label="Image Correction and Spectral Enhancement">
-        <span class="nav-page-text"><span class='chapter-number'>4</span>  <span class='chapter-title'>Image Correction and Spectral Enhancement</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
 
-</body>
 
-</html>
+
+
+</body></html>

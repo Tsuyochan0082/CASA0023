@@ -25,7 +25,7 @@ The following presentation summarizes a specific sensor and its applications in 
 
 ```{r echo=FALSE}
 xaringanExtra::embed_xaringan(
-  url = "file:///Users/chohtsuyoshi/Desktop/CASA0023/Xaringan.html",
+  url = "https://tsuyochan0082.github.io/CASA0023/Xaringan.html",
   ratio = "16:9"
 )
 ```

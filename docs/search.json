@@ -1,42 +1,92 @@
 [
   {
-    "objectID": "week3.html",
-    "href": "week3.html",
-    "title": "4  Image Correction and Spectral Enhancement",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Learning Diary",
     "section": "",
-    "text": "4.1 Summary Content",
+    "text": "1 Table of Contents\nThis diary explores my reflections on the methods covered in class, with a particular focus on how remote sensing can support broader geographical inquiry.\nAt this stage, I am still a beginner in remote sensing. While I do not yet have extensive technical experience, I am especially interested in understanding the algorithms behind methods that seem to provide a broad, bird’s-eye perspective on the earth’s surface, particularly terrain scanning and related forms of topographic observation. I am curious not only about what these techniques can show, but also about how they work, what kinds of assumptions they rely on, and what their limitations may be.\nThrough this course, I hope to learn methods that will deepen my academic understanding of economic geography. In particular, I am interested in how remote sensing and spatial analysis can help reveal patterns of land use, infrastructure, development, regional inequality, and human-environment relations. I therefore see this diary not only as a record of weekly learning, but also as a place to connect course methods to the kinds of questions I hope to pursue more seriously in the future.\nEach week, I will reflect on the key themes, methods, and questions raised in class, while gradually building my own understanding of how these techniques may be applied in geographical research.",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Image Correction and Spectral Enhancement</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Table of Contents</span>"
     ]
   },
   {
-    "objectID": "week3.html#summary-content",
-    "href": "week3.html#summary-content",
-    "title": "4  Image Correction and Spectral Enhancement",
-    "section": "",
-    "text": "4.1.1 Reflections on Lecture: The Importance of Correction\nThis week’s lecture focused on the idea that remotely sensed imagery should not be treated as a finished and fully reliable map, but as data that often require correction and careful interpretation before analysis. Using Landsat as the main example, the lecture explained how satellite images are produced and why different kinds of distortion can arise from sensor design, atmospheric conditions, topography and viewing geometry. In particular, the lecture emphasised the importance of radiometric correction: raw pixel values are stored as Digital Numbers (DN), which are unitless brightness values that vary by sensor and date, and converting them to spectral radiance (Lλ) using gain and bias coefficients makes the data comparable across sensors and time. The second half introduced enhancement methods such as NDVI, PCA and texture analysis. What I found most interesting was Andy’s critical position that more complex processing does not automatically lead to better urban analysis.\n\n\n4.1.2 Connecting Theory to Practical Workflow\nThe practical helped connect these ideas to actual workflow. The main work was based on Landsat Collection 2 Level 2 surface reflectance data which, as discussed in the lecture, has pre-applied atmospheric corrections that make the data comparable across sensors and time. In practice, I found that the most difficult part was not the analysis itself, but preparing the data properly, including downloading the correct scenes, clipping them, handling shapefiles and resolving CRS issues.\n\n\n4.1.3 Lessons from Study Area Selection and Technical Limitations\nA particularly important lesson from the practical was that the usefulness of the outputs depended heavily on the choice of study area. My first attempts did not produce interpretable results, either because the area was too homogeneous or the extent too large. After moving towards Tokyo Bay and reducing the size, the outputs became much clearer. In the final NDVI image, the contrast between water and surrounding urban surfaces became more visible (Figure 1),\n\n\n\nFigrue1:Contrast Enhancement through NDVI (Tokyo Bay).\n\n\nand the PCA results also showed a clearer distinction between the bay and surrounding land (Figure 2).This demonstrated the power of dimensionality reduction. PC1 captures the highest variance, which in my case, effectively isolated the water features of Tokyo Bay from the dense urban fabric.\n\n\n\nFigrue1:Dimensionality Reduction using Principal Component Analysis\n\n\nOne limitation of this week’s work was that the outputs were highly sensitive to technical choices such as CRS, clipping extent and study area selection. This showed me that remote sensing analysis is not simply about applying techniques, but about making critical decisions about data preparation, spatial context and interpretability.",
+    "objectID": "index.html#week-1",
+    "href": "index.html#week-1",
+    "title": "Learning Diary",
+    "section": "1.1 Week 1",
+    "text": "1.1 Week 1\n\nintro to remote sensing",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Image Correction and Spectral Enhancement</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Table of Contents</span>"
     ]
   },
   {
-    "objectID": "week3.html#application",
-    "href": "week3.html#application",
-    "title": "4  Image Correction and Spectral Enhancement",
-    "section": "4.2 Application",
-    "text": "4.2 Application\nIn the second part of this week’s learning, I looked at two application-based papers to understand how the methods introduced in the lecture, especially NDVI and PCA, are actually used in real urban remote sensing research.\nThe first paper was by Kaspersen et al. (Kaspersen, Fensholt, and Drews (2015)). This study used Landsat vegetation indices, including NDVI, to estimate impervious surface fractions in European cities. I found this paper useful because it linked directly to both the lecture and the practical. In the lecture, NDVI was introduced as a simple but effective way of extracting specific land surface characteristics, and in the practical I also calculated NDVI myself. This paper showed that even a relatively simple index can be applied to a real urban problem, in this case the estimation of built-up and sealed surfaces. However, the paper also made clear that there are important limitations. Bare soil, shadow, and tree crowns covering impervious surfaces can all affect the results, which means that NDVI alone cannot fully represent the complexity of urban land cover. I think this matches my own experience in the practical, where the usefulness of the output depended a lot on the study area I selected.\nThe second paper was Deng et al. (Deng et al. (2008)). This paper used PCA to detect land-use change from satellite imagery collected at different times and from different sensors. I thought this was a good example of the feature extraction methods discussed in the lecture. In theory, PCA is useful because it reduces correlated image information into new components that can make patterns more visible. In my own practical work, PCA did help highlight the difference between water and surrounding urban land, especially in the first principal component. At the same time, I also found that the later components were much harder to interpret. This is why I found the limitation of PCA important. It may show differences clearly, but it does not automatically explain what those differences mean. In that sense, I feel PCA is more difficult to interpret than NDVI, even if it sometimes produces more visually interesting outputs.\nOverall, these two papers helped me understand that the techniques introduced in the lecture do have real applications, but also clear limitations. This supports the lecturer’s point that adding more processing is not always the same as producing better analysis. What matters more is whether the method is actually useful for the question being asked.",
+    "objectID": "index.html#week-2",
+    "href": "index.html#week-2",
+    "title": "Learning Diary",
+    "section": "1.2 Week 2",
+    "text": "1.2 Week 2\n\nPortfolio and Xaringan",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Image Correction and Spectral Enhancement</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Table of Contents</span>"
     ]
   },
   {
-    "objectID": "week3.html#reflection",
-    "href": "week3.html#reflection",
-    "title": "4  Image Correction and Spectral Enhancement",
-    "section": "4.3 Reflection",
-    "text": "4.3 Reflection\nThis week’s learning profoundly demonstrated that remote sensing is not merely a sequence of scientific steps but incorporates a significant element of “art”, requiring technical mastery and judgment from the researcher. My experience shifting the study area to Tokyo Bay highlighted that effective analysis requires more than tool proficiency. It demands deep prerequisite geographic knowledge of the site to make informed context-selection decisions. The lecture’s deep dive into the mathematical “black box” of converting Digital Numbers (DN) to radiance was challenging, and I cannot yet claim complete mastery over every technical detail. However, I realized that understanding these underlying mechanisms is essential, even when using convenient Analysis Ready Data (ARD). It is this effort to understand the “why” behind the “what” that allows a researcher to identify data limitations and choose study areas with precision. Transitioning from a passive user of tools to a critical analyst who understands their inner workings is a vital shift. I am confident this mindset will be my strongest asset when moving toward highly automated platforms like Google Earth Engine, ensuring I remain focused on the logical extraction of urban truths rather than just computational convenience.\n\n\n\n\nDeng, J. S., K. Wang, Y. H. Deng, and G. J. Qi. 2008. “PCA-Based Land-Use Change Detection and Analysis Using Multitemporal and Multisensor Satellite Data.” International Journal of Remote Sensing 29 (16): 4823–38. https://doi.org/10.1080/01431160801950162.\n\n\nKaspersen, P. Skougaard, R. Fensholt, and M. Drews. 2015. “Using Landsat Vegetation Indices to Estimate Impervious Surface Fractions for European Cities.” Remote Sensing 7 (6): 8224–49. https://doi.org/10.3390/rs70608224.",
+    "objectID": "index.html#week-3",
+    "href": "index.html#week-3",
+    "title": "Learning Diary",
+    "section": "1.3 Week 3",
+    "text": "1.3 Week 3\n\nImage Correction and Spectral Enhancement",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Image Correction and Spectral Enhancement</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Table of Contents</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#week-4",
+    "href": "index.html#week-4",
+    "title": "Learning Diary",
+    "section": "1.4 Week 4",
+    "text": "1.4 Week 4\n\nPolicy (individual case study: flood system in Ho-Chi-Minh City)",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Table of Contents</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#week-5",
+    "href": "index.html#week-5",
+    "title": "Learning Diary",
+    "section": "1.5 Week 5",
+    "text": "1.5 Week 5\n\nCloud Computing and Google Earth Engine",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Table of Contents</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#week-6",
+    "href": "index.html#week-6",
+    "title": "Learning Diary",
+    "section": "1.6 Week 6",
+    "text": "1.6 Week 6\n\nMachine Learning and Land Cover Classification",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Table of Contents</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#week-7",
+    "href": "index.html#week-7",
+    "title": "Learning Diary",
+    "section": "1.7 Week 7",
+    "text": "1.7 Week 7\n\nSub-pixel and OBIA Classification",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Table of Contents</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#week-8",
+    "href": "index.html#week-8",
+    "title": "Learning Diary",
+    "section": "1.8 Week 8",
+    "text": "1.8 Week 8\n\nSAR Data and Damage Detection",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Table of Contents</span>"
     ]
   },
   {
@@ -77,6 +127,286 @@
     "text": "2.3 Reflection\nComing from an undergraduate background rooted in qualitative field surveys and interviews, transitioning to orbital remote sensing has been a profound shift in perspective. My previous work always prioritized the “human scale”—the lived experience of the city that exists beneath the resolution of any satellite. This practical forced me to think critically about how digital pixels can either support or obscure these human stories.\nThe comparison between 10m and 30m imagery made the “fragility of truth” clear. If an urban planner relies only on 30m data, they risk ignoring the very micro-spaces that define daily life for residents. This realization bridges my previous interest in qualitative social justice with the objective power of RS: high-resolution data is a tool for visibility. Furthermore, the technical friction I faced with SNAP 13.0—specifically the “Invalid OpenJpeg” error which forced me to investigate terminal-based workarounds and eventually pivot to QGIS—was a valuable lesson in “Technical Resilience.” It shifted my view of software from a “black box” to a complex ecosystem of dependencies. This struggle taught me that analytical integrity is maintained not by a perfect tool, but by the researcher’s ability to adapt when tools fail.\nUltimately, this week confirms the principle of “People over Pixels.” While 10m imagery bridges the gap to reality, it remains a proxy. I now believe that the most powerful persuasion in urban policy comes from combining the qualitative energy of the field with the logical, multiscale evidence provided by remote sensing. I am eager to explore Google Earth Engine later this term to see if it can offer a more flexible middle ground between high-level computation and practical urban application.\n\n\n\n\nGascon, M., M. Triguero-Mas, D. Martínez, P. Dadvand, J. Forns, A. Plasència, and M. J. Nieuwenhuijsen. 2016. “Residential Green Spaces and Mortality: A Systematic Review.” Environmental Research 147: 58–70. https://doi.org/10.1016/j.envres.2016.03.029.\n\n\nWolch, J. R., J. Byrne, and J. P. Newell. 2014. “Urban Green Space, Public Health, and Environmental Justice: The Challenge of Making Cities ‘Just Green Enough’.” Landscape and Urban Planning 125: 234–44. https://doi.org/10.1016/j.landurbplan.2014.01.017.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>intro to remote sensing</span>"
+    ]
+  },
+  {
+    "objectID": "week2.html",
+    "href": "week2.html",
+    "title": "3  Portfolio and Xaringan",
+    "section": "",
+    "text": "3.1 Summary: From GUI to Code-based Workflows\nThis week marked a significant shift in my approach to data presentation: moving from GUI-based tools like Canva to a code-based workflow. The goal was to go beyond personal notes and create a “digital legacy” or a “digital twin” of my learning process that is accessible to anyone.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Portfolio and Xaringan</span>"
+    ]
+  },
+  {
+    "objectID": "week2.html#summary-from-gui-to-code-based-workflows",
+    "href": "week2.html#summary-from-gui-to-code-based-workflows",
+    "title": "3  Portfolio and Xaringan",
+    "section": "",
+    "text": "3.1.1 Quarto: The Foundation for a “Living” Notebook\nQuarto is a platform where text, code, and visual results coexist in a single document. Previously, I managed Python code and Word documents separately, which made updating graphs an incredibly tedious process of copying and pasting. With Quarto, the results are automatically integrated. While I initially felt frustrated by the lack of “drag-and-drop” flexibility, I soon realized that following simple rules for headings and lists allows me to focus more on the actual content rather than getting distracted by aesthetics.\n\n\n3.1.2 Xaringan: Sharing Knowledge through the “Sharingan”\nThe slide creation tool “Xaringan” was particularly intriguing. As the only Japanese student in the class, I felt an immediate connection to the name, even though I haven’t watched much Naruto. The tool embodies the open-source philosophy of “copying” and adapting excellent styles from others. The instant preview feature allows the screen to update the moment I save, highlighting the speed and efficiency of programming compared to the manual exporting required in Canva.\n\n\n3.1.3 Deploying a “Digital Twin” on GitHub\nAndy’s story about a student securing a job through their portfolio was highly motivating, especially as I am currently job hunting. Publishing this diary on GitHub feels like placing “proof of my learning” on the global stage. It allows me to showcase not just a polished final product, but the raw, trial and error process (such as my struggles with SNAP in Week 1) as a record of my perseverance and problem-solving.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Portfolio and Xaringan</span>"
+    ]
+  },
+  {
+    "objectID": "week2.html#xaringan-presentation",
+    "href": "week2.html#xaringan-presentation",
+    "title": "3  Portfolio and Xaringan",
+    "section": "3.2 Xaringan Presentation",
+    "text": "3.2 Xaringan Presentation\nThe following presentation summarizes a specific sensor and its applications in remote sensing.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Portfolio and Xaringan</span>"
+    ]
+  },
+  {
+    "objectID": "week3.html",
+    "href": "week3.html",
+    "title": "4  Image Correction and Spectral Enhancement",
+    "section": "",
+    "text": "4.1 Summary Content",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Image Correction and Spectral Enhancement</span>"
+    ]
+  },
+  {
+    "objectID": "week3.html#summary-content",
+    "href": "week3.html#summary-content",
+    "title": "4  Image Correction and Spectral Enhancement",
+    "section": "",
+    "text": "4.1.1 Reflections on Lecture: The Importance of Correction\nThis week’s lecture focused on the idea that remotely sensed imagery should not be treated as a finished and fully reliable map, but as data that often require correction and careful interpretation before analysis. Using Landsat as the main example, the lecture explained how satellite images are produced and why different kinds of distortion can arise from sensor design, atmospheric conditions, topography and viewing geometry. In particular, the lecture emphasised the importance of radiometric correction: raw pixel values are stored as Digital Numbers (DN), which are unitless brightness values that vary by sensor and date, and converting them to spectral radiance (Lλ) using gain and bias coefficients makes the data comparable across sensors and time. The second half introduced enhancement methods such as NDVI, PCA and texture analysis. What I found most interesting was Andy’s critical position that more complex processing does not automatically lead to better urban analysis.\n\n\n4.1.2 Connecting Theory to Practical Workflow\nThe practical helped connect these ideas to actual workflow. The main work was based on Landsat Collection 2 Level 2 surface reflectance data which, as discussed in the lecture, has pre-applied atmospheric corrections that make the data comparable across sensors and time. In practice, I found that the most difficult part was not the analysis itself, but preparing the data properly, including downloading the correct scenes, clipping them, handling shapefiles and resolving CRS issues.\n\n\n4.1.3 Lessons from Study Area Selection and Technical Limitations\nA particularly important lesson from the practical was that the usefulness of the outputs depended heavily on the choice of study area. My first attempts did not produce interpretable results, either because the area was too homogeneous or the extent too large. After moving towards Tokyo Bay and reducing the size, the outputs became much clearer. In the final NDVI image, the contrast between water and surrounding urban surfaces became more visible (Figure 1),\n\n\n\nFigrue1:Contrast Enhancement through NDVI (Tokyo Bay).\n\n\nand the PCA results also showed a clearer distinction between the bay and surrounding land (Figure 2).This demonstrated the power of dimensionality reduction. PC1 captures the highest variance, which in my case, effectively isolated the water features of Tokyo Bay from the dense urban fabric.\n\n\n\nFigrue1:Dimensionality Reduction using Principal Component Analysis\n\n\nOne limitation of this week’s work was that the outputs were highly sensitive to technical choices such as CRS, clipping extent and study area selection. This showed me that remote sensing analysis is not simply about applying techniques, but about making critical decisions about data preparation, spatial context and interpretability.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Image Correction and Spectral Enhancement</span>"
+    ]
+  },
+  {
+    "objectID": "week3.html#application",
+    "href": "week3.html#application",
+    "title": "4  Image Correction and Spectral Enhancement",
+    "section": "4.2 Application",
+    "text": "4.2 Application\nIn the second part of this week’s learning, I looked at two application-based papers to understand how the methods introduced in the lecture, especially NDVI and PCA, are actually used in real urban remote sensing research.\nThe first paper was by Kaspersen et al. (Kaspersen, Fensholt, and Drews (2015)). This study used Landsat vegetation indices, including NDVI, to estimate impervious surface fractions in European cities. I found this paper useful because it linked directly to both the lecture and the practical. In the lecture, NDVI was introduced as a simple but effective way of extracting specific land surface characteristics, and in the practical I also calculated NDVI myself. This paper showed that even a relatively simple index can be applied to a real urban problem, in this case the estimation of built-up and sealed surfaces. However, the paper also made clear that there are important limitations. Bare soil, shadow, and tree crowns covering impervious surfaces can all affect the results, which means that NDVI alone cannot fully represent the complexity of urban land cover. I think this matches my own experience in the practical, where the usefulness of the output depended a lot on the study area I selected.\nThe second paper was Deng et al. (Deng et al. (2008)). This paper used PCA to detect land-use change from satellite imagery collected at different times and from different sensors. I thought this was a good example of the feature extraction methods discussed in the lecture. In theory, PCA is useful because it reduces correlated image information into new components that can make patterns more visible. In my own practical work, PCA did help highlight the difference between water and surrounding urban land, especially in the first principal component. At the same time, I also found that the later components were much harder to interpret. This is why I found the limitation of PCA important. It may show differences clearly, but it does not automatically explain what those differences mean. In that sense, I feel PCA is more difficult to interpret than NDVI, even if it sometimes produces more visually interesting outputs.\nOverall, these two papers helped me understand that the techniques introduced in the lecture do have real applications, but also clear limitations. This supports the lecturer’s point that adding more processing is not always the same as producing better analysis. What matters more is whether the method is actually useful for the question being asked.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Image Correction and Spectral Enhancement</span>"
+    ]
+  },
+  {
+    "objectID": "week3.html#reflection",
+    "href": "week3.html#reflection",
+    "title": "4  Image Correction and Spectral Enhancement",
+    "section": "4.3 Reflection",
+    "text": "4.3 Reflection\nThis week’s learning profoundly demonstrated that remote sensing is not merely a sequence of scientific steps but incorporates a significant element of “art”, requiring technical mastery and judgment from the researcher. My experience shifting the study area to Tokyo Bay highlighted that effective analysis requires more than tool proficiency. It demands deep prerequisite geographic knowledge of the site to make informed context-selection decisions. The lecture’s deep dive into the mathematical “black box” of converting Digital Numbers (DN) to radiance was challenging, and I cannot yet claim complete mastery over every technical detail. However, I realized that understanding these underlying mechanisms is essential, even when using convenient Analysis Ready Data (ARD). It is this effort to understand the “why” behind the “what” that allows a researcher to identify data limitations and choose study areas with precision. Transitioning from a passive user of tools to a critical analyst who understands their inner workings is a vital shift. I am confident this mindset will be my strongest asset when moving toward highly automated platforms like Google Earth Engine, ensuring I remain focused on the logical extraction of urban truths rather than just computational convenience.\n\n\n\n\nDeng, J. S., K. Wang, Y. H. Deng, and G. J. Qi. 2008. “PCA-Based Land-Use Change Detection and Analysis Using Multitemporal and Multisensor Satellite Data.” International Journal of Remote Sensing 29 (16): 4823–38. https://doi.org/10.1080/01431160801950162.\n\n\nKaspersen, P. Skougaard, R. Fensholt, and M. Drews. 2015. “Using Landsat Vegetation Indices to Estimate Impervious Surface Fractions for European Cities.” Remote Sensing 7 (6): 8224–49. https://doi.org/10.3390/rs70608224.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Image Correction and Spectral Enhancement</span>"
+    ]
+  },
+  {
+    "objectID": "week4.html",
+    "href": "week4.html",
+    "title": "5  Policy (individual case study: flood system in Ho-Chi-Minh City)",
+    "section": "",
+    "text": "5.1 Content Summary",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Policy (individual case study: flood system in Ho-Chi-Minh City)</span>"
+    ]
+  },
+  {
+    "objectID": "week4.html#content-summary",
+    "href": "week4.html#content-summary",
+    "title": "5  Policy (individual case study: flood system in Ho-Chi-Minh City)",
+    "section": "",
+    "text": "5.1.1 Connecting EO to policy\nIn this case, I would like to focus on land subsidence in Ho Chi Minh City. In the lecture, I learned that Earth Observation has many possibilities for visualising urban problems, but I also felt that it is important not only to make problems “visible” but also to consider how such information can be used in policy. The lecture also emphasised that, although remote sensing data can provide consistent spatial and temporal information when combined with other GIS datasets, many studies only demonstrate relevance to a problem and do not go far enough in addressing which areas should be prioritised, who should use the data, or at what stage it should be incorporated into the planning process.\n\n\n5.1.2 Why Ho Chi Minh City?\nHo Chi Minh City is a suitable case for thinking about the connection between EO and policy because it faces overlapping pressures of rapid urbanisation, flood risk, and the vulnerability of being a delta city. In particular, when considering cases such as Jakarta, where multiple urban stresses including land subsidence have contributed to discussions that go beyond urban policy and into broader national spatial restructuring, I felt that Ho Chi Minh City also needs to connect subsidence monitoring to policy decision-making before the problem becomes more severe. (Figure1)In that sense, it seems more appropriate to understand EO not as a technology that directly solves urban problems, but as one that creates an evidence base for policy decisions.\n\n\n\nFigure1: Compounding Hazards of Subsidence and Flooding in Ho Chi Minh City 2014.\n\n\nThis approach directly aligns with the New Urban Agenda, which recognizes delta cities’ vulnerability, and contributes to SDG Target 11.5 by reducing disaster impacts on human settlements.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Policy (individual case study: flood system in Ho-Chi-Minh City)</span>"
+    ]
+  },
+  {
+    "objectID": "week4.html#applications",
+    "href": "week4.html#applications",
+    "title": "5  Policy (individual case study: flood system in Ho-Chi-Minh City)",
+    "section": "5.2 Applications",
+    "text": "5.2 Applications\n\n5.2.1 What EO data can contribute\nIn this case, I think the value of EO data lies not only in observing land subsidence itself, but also in contributing to decisions about where limited administrative resources should be directed first. Currently, Ho Chi Minh City largely relies on fragmented ground-based monitoring and conventional flood management policies that often focus on monitoring rather than proactive prevention. While these provide localized data, they lack the consistent spatial coverage needed for a city-wide strategic response. Technologies such as InSAR can advance this current approach by identifying where subsidence is most severe and how it evolves spatially and temporally through phase difference analysis.\nIf this information is then overlaid with GIS datasets such as flood risk, land use, and critical infrastructure, it transforms remote sensing from a mere observation tool into a decision-support system that assists in prioritising road repairs and drainage improvements. However, we must account for technical noise in dense urban areas, such as corner reflections and speckle, which can obscure patterns if not properly evaluated. For that reason, the results cannot simply be translated directly into policy without addressing the human and institutional skills required to interpret them.\n\n\n5.2.2 Proposal: building an educational and operational system\nWhat I would like to propose is not simply the creation of a subsidence map, but the establishment of an educational and operational system through which this kind of analysis can be continuously updated locally. In an environment where there may be constraints on long-term external data access and management, it may be more sustainable not to provide a completed map from outside as a one-off product. Instead, I propose empowering local institutions, such as the Department of Urban Planning and Architecture (DPA), to enable local engineers and administrative staff to interpret EO data, visualise risk through GIS, set maintenance priorities, and evaluate results for themselves. If this improves the prioritisation of road repair and drainage works, and even slightly reduces wasted spending under limited budgets, then part of that savings could be reinvested into further training and future updates. In that sense, the role of EO in this topic may lie not simply in producing an “accurate map,” but in creating a locally sustainable decision-support system, as conceptualized in Figure 2.\n\n\n\nFigure2: The Integrated Decision-Support Cycle for Urban Governance.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Policy (individual case study: flood system in Ho-Chi-Minh City)</span>"
+    ]
+  },
+  {
+    "objectID": "week4.html#reflection",
+    "href": "week4.html#reflection",
+    "title": "5  Policy (individual case study: flood system in Ho-Chi-Minh City)",
+    "section": "5.3 Reflection",
+    "text": "5.3 Reflection\n\n5.3.1 From technology to governance\nPersonally, thinking through this topic helped me understand more realistically what it means to use EO in policy. At first, I thought that for a problem such as land subsidence, the main priority was simply to create the most accurate map possible. However, through the lecture, I came to feel that what matters more is who uses that map, within what budgetary and institutional context, and at what stage of decision-making it is incorporated.\n\n\n5.3.2 What I learned\nIn the case of Ho Chi Minh City, what is technically observable and what can actually function as policy are not the same thing. That is why I think there is value not only in providing a one-off external analysis, but in building a foundation of knowledge and skills that can be updated locally over time. At the same time, I also recognise that this idea could remain idealistic, because in practice it must still confront constraints of institutions, budgets, human resources, and data sharing. What impressed me most in this week’s lecture was that EO is not a neutral technology that simply reveals the truth. Its value depends on how it is used. In that sense, policy week felt less about technology itself and more about governance.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Policy (individual case study: flood system in Ho-Chi-Minh City)</span>"
+    ]
+  },
+  {
+    "objectID": "week4.html#reference",
+    "href": "week4.html#reference",
+    "title": "5  Policy (individual case study: flood system in Ho-Chi-Minh City)",
+    "section": "5.4 Reference",
+    "text": "5.4 Reference\n\nWorld Bank (2015). Vietnam - Ho Chi Minh City Flood Risk Management Project: Environmental and Social Impact Assessment. Washington, DC: World Bank. Available at: https://documents.worldbank.org/en/publication/documents-reports/documentdetail/296891468330027063/vietnam-ho-chi-minh-city-flood-risk-management-project-environmental-and-social-impact-assessment\nTran, T.N. (2014). Improvement of Flood Risk Assessment under Climate Change in Ho Chi Minh City with GIS Applications. Available at: https://www.researchgate.net/publication/283378874_Improvement_of_flood_risk_assessment_under_climate_change_in_Ho_Chi_Minh_City_with_GIS_applications",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Policy (individual case study: flood system in Ho-Chi-Minh City)</span>"
+    ]
+  },
+  {
+    "objectID": "week5.html",
+    "href": "week5.html",
+    "title": "6  Cloud Computing and Google Earth Engine",
+    "section": "",
+    "text": "6.1 Content Summary",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Cloud Computing and Google Earth Engine</span>"
+    ]
+  },
+  {
+    "objectID": "week5.html#content-summary",
+    "href": "week5.html#content-summary",
+    "title": "6  Cloud Computing and Google Earth Engine",
+    "section": "",
+    "text": "6.1.1 Transition to Cloud-Based Analysis: “Bringing the code to the data”\nThis week’s lecture introduced a transformative shift in geospatial workflows. While QGIS relies on manual operations and R enables local statistical rigor, Google Earth Engine (GEE) represents a fundamental paradigm shift. The core innovation is transitioning from downloading datasets to “bringing the code to the data.” By executing scripts on Google’s cloud infrastructure, GEE allows near-instant processing of planetary-scale data regardless of local hardware specs. I perceive this as the “democratization of geospatial infrastructure.”This efficiency is achieved through Proxy Objects, which are handles to data residing on Google’s servers, preventing the local machine from being overwhelmed. However, this liberation implies new dependencies on external factors like Google’s resource quotas and network stability, necessitating a strategic mindset for managing computational resources.\n\n\n6.1.2 Statistical Aggregation: Creating Certainty via Reducers\nIn GEE, the “Reducer” is the essential mechanism for transforming vast raw data into meaningful information. Specifically, it converts an ImageCollection into a single Image through pixel-wise statistical aggregation .This method stacks hundreds of satellite images to perform pixel-wise statistical aggregation. Traditionally, researchers spent significant effort searching for a single “lucky” cloud-free image. However, the Median Reducer converts this luck into mathematical certainty. During the practical, I compared raw imagery with reduced results. Unprocessed images exhibited haziness from cloud reflectance, but the median function successfully restored the authentic spectral characteristics of the earth’s surface.\n\n\n\n\n\n\nFigure1: A London map made from OBIA without cloud filter\n\n\n\n\n\n\n\nFigure2: A London map made from OBIA with cloud filter\n\n\n\n\n\nNevertheless, one must remain mindful that automated aggregation may discard rare but significant land-cover changes as mere outliers.\n\n\n6.1.3 Efficient Data Abstraction: PCA and the Evidence of the “97%”\n\n\n\nI was particularly intrigued by GEE’s “on-the-fly” computation, which automates re-projection and resolution adjustments. This liberates analysts from tedious pre-processing, allowing more time for substantive geographical inquiry. In the practical, I applied Principal Component Analysis (PCA) to condense 19 spectral bands. While PCA computation occurs on the Server-side, the brief lag I experienced during rendering was a bottleneck where complex results were simplified for the Client-side browser display. A brief lag during rendering exposed the bottleneck occurring when the client-side attempts to display complex server-side results. Numerically, the top three components accounted for approximately 97% of the total variance, confirming that the remaining dimensions were largely noise.\n\n\n\n\n\nFigure 3: PCA Eigenvalue Analysis and Percentage Variance Explained.\n\n\n\n\n\nWhile powerful, these automated processes risk becoming a “black box.” Maintaining a critical stance toward mathematical verification is a prerequisite for truly harnessing the benefits of digital geography.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Cloud Computing and Google Earth Engine</span>"
+    ]
+  },
+  {
+    "objectID": "week5.html#applications",
+    "href": "week5.html#applications",
+    "title": "6  Cloud Computing and Google Earth Engine",
+    "section": "6.2 Applications",
+    "text": "6.2 Applications\nThe practical sessions highlighted that the core strength of Google Earth Engine (GEE) lies not merely in its computational speed or data accessibility, but in how these efficiencies enable deeper analytical inquiry. This perspective was reinforced by Phan and Kappas (Phan and Kappas (2020)), who demonstrated that GEE’s capacity for rapid processing allows researchers to shift their focus from the final classification result to the underlying methodological choices, such as image compositing strategies. By comparing various compositing methods, they showed that the way input imagery is assembled significantly influences classification accuracy. For me, the significance of this study is that GEE’s speed allowed the researchers to move beyond “getting a result” to asking a more meaningful question: What kind of image composite best represents this specific landscape? Phan and Kappas reported that while complex time-series data yielded high accuracy, a carefully selected median composite performed similarly, suggesting that the choice of compositing method is itself a critical research question.\nThis concept of “methodological choice as analysis” became even clearer through Zhang et al. (Zhang et al. (2021)). Their study compared different annual composites created with GEE reducers for urban mapping and found that a combination of multiple reducers outperformed any single reducer. This helped me realize that reducers are not just time-saving functions, they represent analytical decisions about what constitutes “signal” versus “noise” within a massive image archive. This directly mirrors my experience in the practical, where the median reducer effectively mitigated cloud interference to produce a clearer image.\nHowever, this process also demands caution. While reducers improve readability and accuracy, they risk treating short-term environmental changes or rare phenomena as statistical outliers to be removed. Thus, GEE does not make the analyst less necessary. Rather, it demands more active judgment regarding processing choices and the interpretation of results. Ultimately, the true value of GEE lies in freeing the researcher from technical bottlenecks, thereby providing the time to compare methods and think more critically about the geographical meaning of the output.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Cloud Computing and Google Earth Engine</span>"
+    ]
+  },
+  {
+    "objectID": "week5.html#reflection",
+    "href": "week5.html#reflection",
+    "title": "6  Cloud Computing and Google Earth Engine",
+    "section": "6.3 Reflection",
+    "text": "6.3 Reflection\nThis week provided my first clear understanding of the practical value of cloud-based systems. While I had encountered the term “cloud” during job hunting, I had never fully grasped its direct relevance to my own analytical workflow. Having previously struggled with software performance due to limited local hardware specifications, I found it particularly meaningful that Google Earth Engine (GEE) decouples analysis from physical hardware constraints by “bringing the code to the data” on remote servers. In this sense, GEE represents more than just a convenient tool. It is a prime example of the **“democratization of data analysis,” making spatial inquiry accessible to anyone without prohibitive infrastructure costs*. However, GEE demands a fundamental shift in mindset beyond just speed. Rather than manipulating data directly, I learned that I am interacting with Proxy Objects, which are handles to data residing on Google’s servers. This required me to restructure my geographical logic entirely. A significant challenge was the transition from procedural loops to functional mapping, which allows GEE to distribute processing efficiently across multiple machines in parallel . Furthermore, the fact that scale or resolution is determined by the output rather than the input was a revelation. Understanding how GEE selects the appropriate level from an image pyramid and resamples data highlighted my responsibility as an analyst to critically evaluate the scale at which results are calculated. I also recognized that as the process becomes more seamless, it risks becoming a “black box.” Because results can be generated with such ease, it becomes increasingly difficult to personally verify the methodological soundness of every underlying calculation. This has reinforced my belief that continuing to master tools like R and QGIS remains essential for understanding fundamental processes**, rather than simply accepting automated outputs. For me, this week was valuable not only for introducing an advanced technology but for prompting a serious reflection on how to use such power critically and responsibly.\n\n\n\n\nPhan, T. N., and M. Kappas. 2020. “Land Cover Classification Using Google Earth Engine and Random Forest Classifier—the Role of Image Composition.” Remote Sensing 12 (15): 2411. https://doi.org/10.3390/rs12152411.\n\n\nZhang, Zhaoming, Mingyue Wei, Dongchuan Pu, Guojin He, Guizhou Wang, and Tengfei Long. 2021. “Assessment of Annual Composite Images Obtained by Google Earth Engine for Urban Areas Mapping Using Random Forest.” Remote Sensing 13 (4): 748. https://doi.org/10.3390/rs13040748.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Cloud Computing and Google Earth Engine</span>"
+    ]
+  },
+  {
+    "objectID": "week6.html",
+    "href": "week6.html",
+    "title": "7  Machine Learning and Land Cover Classification",
+    "section": "",
+    "text": "7.1 Summary Content",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Machine Learning and Land Cover Classification</span>"
+    ]
+  },
+  {
+    "objectID": "week6.html#summary-content",
+    "href": "week6.html#summary-content",
+    "title": "7  Machine Learning and Land Cover Classification",
+    "section": "",
+    "text": "7.1.1 1. Reflection on Course Content and Personal Insights\nWhen I first encountered GEE last week, I was amazed by the convenience of not having to prepare massive map datasets myself. This week, that impression deepened further. Initially, I thought land cover classification was a simple task of sorting land into types, but I have learned that it is actually a highly sophisticated translation process that converts spectral information into meanings understandable to humans. The core of this week’s learning was supervised machine learning, which overlapped well with what I have been learning in my DSSS module. While the logic of decision trees was clear, I gained a much deeper understanding of the risks of overfitting, where a model becomes too attached to specific data and loses its generalizability. The most striking part of the lecture was the debate between pixel-based and object-based analysis. I feel that no matter how powerful an analytical tool is, if the unit of analysis does not resonate with the audience, the credibility of the results will be weakened.\n\n\n7.1.2 2. Muddy Trial and Error in Practice\nIn the practical session, I proceeded with land cover classification of Liverpool using GEE. While I was impressed by the lightness of the workflow, I was soon troubled by computational limits. In my attempt to be precise while manually inputting polygons, I encountered the “5000 elements” error. Once I managed to bypass this, the resulting map had many grey areas, indicating that the AI could not accurately determine certain elements.\n\n\n\nInitial classification attempt showing significant grey areas and class imbalance\n\n\nFurthermore, when attempting to verify accuracy, I was blocked by the “One-class error,” caused by Liverpool’s heavily biased land use making it difficult to sample all classes equally.\n\n\n7.1.3 3. Strategic Decisions and Conclusion\nTo break through this stalemate, I consolidated the classes into three primary categories to eliminate the grey noise. To confirm internal consistency, I used resubstitution accuracy, and the grey areas disappeared.\n\n\n\nOptimized 3-class classification resulting in a cleaner and more consistent map\n\n\nI ultimately achieved 99.7% accuracy, though I am fully aware this contains optimism bias and risks overfitting. In future iterations, implementing a Random Forest classifier would be preferable, as its OOB(out of Bag) error estimate provides a more robust measure of true predictive power. Through this experience, I learned the difficulty of class setting and, most importantly, the challenges of the non-programming aspects: the muddy, human task of drawing balanced polygons.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Machine Learning and Land Cover Classification</span>"
+    ]
+  },
+  {
+    "objectID": "week6.html#applications",
+    "href": "week6.html#applications",
+    "title": "7  Machine Learning and Land Cover Classification",
+    "section": "7.2 Applications",
+    "text": "7.2 Applications\nMy primary takeaway from this week is that the choice between treating land as “pixels” or as “objects” is not merely a technical preference. It directly relates to the “Geographical Integrity” of the researcher—what kind of urban “truth” one intends to reflect.\nComparison of Macro and Micro Perspectives: When the objective is to grasp broad urban trends or complex interrelationships between multi-source data, macro-level analysis serves as a powerful tool. The study by Zhao et al. (Zhao et al. (2020)) presents a method for structuring cities not just as a collection of pixels, but as a “Knowledge Graph”. This approach prioritizes the “semantic relationships” and network structures behind individual data points. Rather than fixating solely on the values of isolated pixels, it highlights the importance of capturing a macro-perspective of how urban functions, land use, and resident mobility evolve over time.\nIn contrast, Rajji et al. (Rajji et al. (2022)) provide a micro-level perspective focused on the physical geometry of the city. They estimate building heights from high-resolution imagery, but the key here is their redefinition of “shadows”—often treated as mere noise—as essential structural data associated with a building “object”. Reflecting on my practical session, I believe the “ambiguity (grey areas)” that troubled me could have been resolved more accurately if I had treated those areas not as pixel points, but as objects with specific contexts, such as shape and solar orientation.\nSynthesis and Future Implementation: Connecting these two perspectives is the concept of “Analytical Integrity” that I arrived at through the practical exercise. While the grey noise I encountered could not be attributed to a single definitive cause, that very ambiguity was a vital experience that forced me to realize the limitations of relying solely on pixel-based numerical values.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Machine Learning and Land Cover Classification</span>"
+    ]
+  },
+  {
+    "objectID": "week6.html#reflection",
+    "href": "week6.html#reflection",
+    "title": "7  Machine Learning and Land Cover Classification",
+    "section": "7.3 Reflection",
+    "text": "7.3 Reflection\nReflecting on this week’s module, my experience with Google Earth Engine (GEE) began with an initial admiration for its computational efficiency. However, through the practical session, it transformed into a “muddy” realization of the responsibilities that a spatial analyst must carry. Despite the difficulties, I now recognize that this process of land cover classification is an essential foundation for providing the logical evidence needed to inspire people to take action. This was my original motivation for joining this master’s course, and I believe this is a fundamental skill I must master. In the practical session, I faced the challenging task of manually creating training polygons rather than relying entirely on a fully automated AI analysis. While this is not an easy skill to master, the use of such machine learning models is directly connected to “reproducibility,” which is a value I prioritize in spatial analysis. The fact that AI’s computational power alone is insufficient for high reproducibility, and that appropriate human intervention and geographical interpretation are required, proves why human judgment remains essential even as data analysis becomes more advanced. In my future research on urban spatial inequality, I will not view “grey noise” as a failure of the tool, but as a signal to reconsider the scale of my analysis. Whether I am examining macro-level disparities across an entire city or micro-level densification in specific neighborhoods, I must choose the scale that best fits the social reality. I am convinced that selecting the most appropriate scale for the context is the most important lesson I learned this week and a true practice of geographical integrity.\n\n\n\n\nRajji, Abdelatif, Abdessamad Najine, Amina WAFIK, and Amroumoussa Benmoussa. 2022. “Building Height Estimation from High Resolution Satellite Images.” International Journal of Innovation and Applied Studies 35 (2): 268–81. http://www.ijias.issr-journals.org/abstract.php?article=IJIAS-21-298-01.\n\n\nZhao, Lin, Jian Rao, Sang-Bing Li, Qing Huang, Qiang Wu, and Weiqiang Xu. 2020. “Urban Multi-Source Spatio-Temporal Data Analysis Aware Knowledge Graph Embedding.” Symmetry 12 (2): 199. https://doi.org/10.3390/sym12020199.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Machine Learning and Land Cover Classification</span>"
+    ]
+  },
+  {
+    "objectID": "week7.html",
+    "href": "week7.html",
+    "title": "8  Sub-pixel and OBIA Classification",
+    "section": "",
+    "text": "8.1 Content Summary",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Sub-pixel and OBIA Classification</span>"
+    ]
+  },
+  {
+    "objectID": "week7.html#content-summary",
+    "href": "week7.html#content-summary",
+    "title": "8  Sub-pixel and OBIA Classification",
+    "section": "",
+    "text": "8.1.1 Accuracy Validation and Optimism Bias\nThis week’s learning began with a theoretical critique of how classification accuracy is validated. The lecture highlighted the “Optimism Bias” inherent in the Resubstitution method, where using the same samples for training and validation leads to artificially high results. In the practical, I addressed this by moving away from the 99.7% accuracy achieved in previous sessions, instead implementing a 70:30 Random Split for validation. This transition from “internal consistency” to “predictive power” ensured that the final overall accuracy of 87.5% was a scientifically robust and honest reflection of the model’s performance in a complex urban environment like London.\n\n\n8.1.2 Object-Based Image Analysis (OBIA) via SNIC\nA major conceptual shift was the move from pixel-based methods to Object-Based Image Analysis (OBIA). Pixel-based classification, while straightforward, often results in “salt-and-pepper noise” because it ignores the spatial context of neighboring cells. Following the lecture’s emphasis on superpixels, I implemented the Simple Non-Iterative Clustering (SNIC) algorithm in the practical. By grouping adjacent pixels with similar spectral properties into statistical “objects,” I was able to preserve the structural integrity of the urban fabric, such as the clear delineation of the River Thames and distinct urban blocks, which would have been fragmented under a pixel-only approach.\n\n\n\nFigure 1: Object-Based Image Analysis (OBIA) of Greater London using SNIC\n\n\n\n\n8.1.3 Spatial Autocorrelation and Strategic Sampling\nThe lecture introduced Tobler’s First Law of Geography, which states that near things are more related than distant things. This principle of spatial autocorrelation poses a challenge for sampling, as clustered data can lead to redundant information and over-fitted models. To operationalize this theory during the practical, I developed a strategic sampling plan by dividing the metropolis into five sectors: North, South, East, West, and Central London. By ensuring that training plots were distributed across these varied geographical contexts, the classifier captured a representative range of spectral signatures, thereby mitigating the risks associated with spatial autocorrelation.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Sub-pixel and OBIA Classification</span>"
+    ]
+  },
+  {
+    "objectID": "week7.html#application",
+    "href": "week7.html#application",
+    "title": "8  Sub-pixel and OBIA Classification",
+    "section": "8.2 Application",
+    "text": "8.2 Application\nThe core of this week’s learning lies in understanding how the choice between object-based and pixel-based methodologies reflects a researcher’s underlying narrative and intent. Choosing whether to treat land as a collection of independent pixels or as a series of meaningful objects is not merely a technical preference. It relates directly to the “Geographical Integrity” of the researcher and which version of urban “truth” one intends to manifest. In the context of analyzing economic-geographical inequalities, this choice determines whether we perceive poverty as a fragmented spectral value or as a structural, spatial manifestation of social exclusion.\nWhen examining urban inequality through a micro-structural lens, the differentiation between these two approaches becomes evident in how they define social stratification. Kohli et al. (Kohli et al. (2013)) demonstrate the power of Object-Based Image Analysis (OBIA) by defining slums as physical “objects” characterized by specific geometries and textures, proving that such structural identifiers can be transferred across diverse urban contexts like Kenya and India to pinpoint marginalized areas. Conversely, Sathyakumar et al. (Sathyakumar, Ramsankaran, and Bardhan (2019)) focus on the relationship between socioeconomic status and the distribution of urban green space, showing how environmental benefits can be unevenly distributed across urban areas. While Kohli’s OBIA approach is superior for capturing the morphological “essence” of informal settlements, it risks sensitivity to local definitions. Meanwhile, the pixel-based indicators highlighted by Sathyakumar offer a more comparable way to quantify environmental inequality, even if they may overlook lived environmental nuances such as how building shadows affect the microclimate of a neighborhood.\nSynthesizing these perspectives reveals that the true value of classification lies in its ability to transform raw numerical data into a map of inequality that informs policy. My experience with the misclassification of shadows during the practical session was a crucial realization that ambiguity in data is often where the most significant urban stories are hidden. Treating those shadows not as noise but as contextual objects can reveal density and living conditions invisible to simple spectral analysis. By integrating these micro-structural insights with macro-temporal patterns, such as monitoring long-term urban sprawl or post-disaster recovery, remote sensing evolves from a mere observation tool into a powerful political instrument. For my future project, this shift from pursuing perfect accuracy to extracting social context will be essential in identifying the hidden variables of urban inequality and translating them into actionable evidence for fairer city planning.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Sub-pixel and OBIA Classification</span>"
+    ]
+  },
+  {
+    "objectID": "week7.html#reflection",
+    "href": "week7.html#reflection",
+    "title": "8  Sub-pixel and OBIA Classification",
+    "section": "8.3 Reflection",
+    "text": "8.3 Reflection\nThis week’s transition from basic classification to advanced spatial logic has taught me that the quality of a remote sensing model depends less on the algorithm itself and more on the researcher’s deliberate process of teaching “urban reality” to the machine. Building upon last week’s foundational pixel-based classification, the implementation of OBIA and SMA has shifted my perspective. The choice between “pixels” and “objects” is no longer just a technical setting. It has evolved into a fundamental question of how we should perceive the resolution of a city to uncover hidden socioeconomic truths.\nA critical takeaway from the practical session was confronting the inherent limitations of satellite imagery, such as the persistent ambiguity caused by shadows and blurred boundaries. Paradoxically, acknowledging that satellite data is not “100% perfect” allowed me to appreciate the immense flexibility of interpreting visual information through multiple analytical lenses. While these technologies are powerful for capturing macro-scale dynamics, such as long-term urban evolution or economic trends. I have reaffirmed that they cannot replace the “worm’s-eye view” gained from walking the streets. The realization that we require both the “bird’s-eye view” of remote sensing and the “ground truthing” of field observation to achieve “Geographical Integrity” is perhaps my most significant intellectual growth this week.\nLooking ahead, I am convinced that mastering the precise analysis of night-time lights, road network transitions, and urban development stages is an indispensable skill for my commitment to redressing economic inequality. The ability to implement machine learning to transform visible disparities into empirical evidence provides a formidable weapon for evidence-based policy advocacy. However, this journey has also raised a new inquisitive dialogue: must we treat pixels and objects as a strict dichotomy? I am increasingly interested in pursuing a “hybrid perspective” that retains the spectral richness of pixels while integrating the geometric context of objects. Such an approach could open a new frontier in analyzing complex phenomena like urban inequality, moving beyond sterile metrics toward a more human-centric spatial science.\n\n\n\n\nKohli, Divyani, Pankaj Warwadekar, Norman Kerle, Richard Sliuzas, and Alfred Stein. 2013. “Transferability of Object-Oriented Image Analysis Methods for Slum Identification.” Remote Sensing 5 (9): 4209–28. https://doi.org/10.3390/rs5094209.\n\n\nSathyakumar, V., R. Ramsankaran, and R. Bardhan. 2019. “Linking Remotely Sensed Urban Green Space (UGS) Distribution Patterns and Socio-Economic Status (SES) - a Multi-Scale Probabilistic Analysis Based in Mumbai, India.” GIScience & Remote Sensing 56: 645–69. https://doi.org/10.1080/15481603.2018.1549819.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Sub-pixel and OBIA Classification</span>"
+    ]
+  },
+  {
+    "objectID": "week8.html",
+    "href": "week8.html",
+    "title": "9  SAR Data and Damage Detection",
+    "section": "",
+    "text": "9.1 Summary: SAR-based Change Detection and the Beirut Case Study\nThe practical focused on the Beirut explosion as a case study for SAR-based damage detection. Instead of relying on a simple before-and-after comparison, the workflow used multiple pre-event and post-event Sentinel-1 images to calculate the mean and standard deviation of each pixel, and then applied a pixel-wise t-test to identify statistically significant change.(Figure1) The lecture also introduced the idea of using ROC curves to evaluate whether change detection results are actually reliable, which made it clear that producing an output map is not enough on its own and that validation matters.\nAt the same time, an important limitation was discussed: the assumptions behind a t-test do not always perfectly match the statistical properties of SAR data. I understood this as a reminder that the method is useful, but should not be treated as automatically precise simply because it looks technical.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>SAR Data and Damage Detection</span>"
+    ]
+  },
+  {
+    "objectID": "week8.html#summary-sar-based-change-detection-and-the-beirut-case-study",
+    "href": "week8.html#summary-sar-based-change-detection-and-the-beirut-case-study",
+    "title": "9  SAR Data and Damage Detection",
+    "section": "",
+    "text": "Figure1:Change detection of Beirut Explosion\n\n\n\n9.1.1 Application to Suzu City (Tsunami Damage)\nI then tried to apply this same workflow myself to the tsunami-affected coastal area of Suzu City. I was able to generate both a change map and a building-level change map(Figure2 & Figure3), but the result did not produce a clear and concentrated damage pattern in the same way as the Beirut example. Instead, the mapped changes appeared more as a narrow band along the coastline, around settlements and port areas. This pattern reflects the physical principle behind SAR: calm water surfaces reflect radar pulses away from the sensor through specular reflection, appearing dark, while tsunami debris or damaged structures increase backscatter intensity. In other words, SAR was not directly showing “damage itself” but rather highlighting where backscatter had changed significantly. In a tsunami setting, this distinction seems especially important, because damage may involve flooding, internal structural damage, or low-level destruction that does not necessarily appear as a dramatic top-down shape change. I also had to be mindful that while GEE provides Sentinel-1 C-band data in dB scale for visualisation, statistical analysis like the t-test should ideally consider the underlying distribution of the data. For that reason, I came to see SAR as a very effective tool for rapid, broad post-disaster assessment, but not as a definitive map of damage. Its outputs need to be interpreted more carefully as change candidate maps, rather than final damage maps.\n\n\n\n\n\n\nFigure 2: Suzu Map\n\n\n\n\n\n\n\nFigure 3: Building-level Chnage Candidates in Suzu Map",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>SAR Data and Damage Detection</span>"
+    ]
+  },
+  {
+    "objectID": "week8.html#application-integration-with-other-data-sources",
+    "href": "week8.html#application-integration-with-other-data-sources",
+    "title": "9  SAR Data and Damage Detection",
+    "section": "9.2 Application: Integration with Other Data Sources",
+    "text": "9.2 Application: Integration with Other Data Sources\nHaving worked through this practical, I initially saw SAR-based change detection as a technique that could directly show damage itself. However, I came to feel that it actually functions more as a foundational dataset: it rapidly shows, at a broad spatial scale, where major change has occurred, and in doing so helps guide subsequent investigation and decision-making.\n\n9.2.1 Combination with Optical Imagery\nThe most typical combination is with optical imagery. SAR is less constrained by weather conditions or time of day, making it useful for rapidly identifying change immediately after a disaster, whereas optical imagery allows damage to be understood more intuitively. In their review, Ge et al. (Ge, Gokon, and Meguro (2020)) explain that SAR offers strengths in spatial coverage, timeliness, and all-weather capability, while having limitations in visual interpretability, which makes its complementary use with optical imagery especially important. Beyond simple visual comparison, more advanced fusion approaches can be employed: for instance, an IHS transformation replaces the intensity component of an optical RGB image with SAR backscatter, effectively combining human-intuitive color with radar’s structural detail, directly addressing the visual interpretability limitation noted by Ge et al.\n\n\n9.2.2 Combination with Social Media Data\nAmong many other possible combinations, the one I found most interesting was the use of social media imagery. Satellite imagery is inevitably synoptic: it can show where major change has occurred, but it cannot always fully capture how damage was actually experienced on the ground. In their study of Hurricane Dorian, Imran et al. (Imran et al. (2020)) present a framework in which images posted on Twitter were collected and processed through a combination of human and machine classification. What I found especially convincing was the idea that social data can supplement the on-the-ground view that synoptic datasets like SAR cannot fully provide. However, filtering and classification are essential, and social data involve issues such as spatial bias and misinformation, making it most realistic to treat SAR as a synoptic indicator of where attention should be focused, with optical or social media imagery then explaining what was actually happening there.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>SAR Data and Damage Detection</span>"
+    ]
+  },
+  {
+    "objectID": "week8.html#reflection-the-value-of-sar-in-disaster-management",
+    "href": "week8.html#reflection-the-value-of-sar-in-disaster-management",
+    "title": "9  SAR Data and Damage Detection",
+    "section": "9.3 Reflection: The Value of SAR in Disaster Management",
+    "text": "9.3 Reflection: The Value of SAR in Disaster Management\nWhat stood out to me most this week was that I began to understand SAR not as a technology that produces a complete and final picture of damage, but as a form of foundational information that can support decision-making immediately after a disaster. Before doing the practical, the output of change detection looked to me like it could simply be read as a damage map. However, when I applied the workflow myself to the tsunami-affected area of Suzu, I realised that SAR is really showing statistically significant changes in backscatter, and that interpreting those changes still requires caution.\nAt the same time, I do not think this makes the method weak. On the contrary, its value lies in being able to identify broad areas of major change very quickly and indicate where further investigation should be prioritised. In a country like Japan, where earthquakes, tsunamis, and volcanic hazards are constant concerns, I think this makes SAR a highly relevant and necessary technology. If future disasters such as a Nankai Trough earthquake or a Mount Fuji eruption are considered, the ability to gain a rapid synoptic view of likely damage before full ground access is possible seems especially important.\nMoreover, the practical also reminded me that satellite data alone can never fully replace on-the-ground understanding. One of the clearest lessons for me was that even a technically impressive SAR output is still not the same thing as reality itself. It can guide attention, but it cannot by itself confirm the full nature of what has happened. For that reason, I think it is essential that remote sensing outputs are always connected back to field observation. What I learned this week was not only the technical potential of SAR, but also the importance of linking large-scale synoptic data with grounded, local evidence.\n\n\n\n\nGe, Pingping, Hiroaki Gokon, and Kimiro Meguro. 2020. “A Review on Synthetic Aperture Radar-Based Building Damage Assessment in Disasters.” Remote Sensing of Environment 240: 111693. https://doi.org/10.1016/j.rse.2020.111693.\n\n\nImran, Muhammad, Firoj Alam, Umair Qazi, Steve Peterson, and Ferda Ofli. 2020. “Rapid Damage Assessment Using Social Media Images by Combining Human and Machine Intelligence.” In Proceedings of the 17th ISCRAM Conference, 1–13. Blacksburg, VA, USA. https://mimran.me/papers/rapid_damage_assessment_using_sm_images_dorian_ISCRAM2020.pdf.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>SAR Data and Damage Detection</span>"
     ]
   }
 ]

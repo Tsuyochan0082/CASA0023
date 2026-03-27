@@ -7,7 +7,7 @@ format: html
 
 ### Connecting EO to policy
 
-In this case, I would like to focus on land subsidence in Ho Chi Minh City. In the lecture, I learned that Earth Observation has many possibilities for visualising urban problems, but I also felt that it is important not only to make problems “visible” but also to consider how such information can be used in policy. The lecture also emphasised that, although remote sensing data can provide consistent spatial and temporal information when combined with other GIS datasets, many studies only demonstrate relevance to a problem and do not go far enough in addressing which areas should be prioritised, who should use the data, or at what stage it should be incorporated into the planning process.
+In this case, I would like to focus on land subsidence in Ho Chi Minh City. In the lecture, I learned that Earth Observation has many possibilities for visualising urban problems, but I also felt that it is important not only to **make problems “visible” but also to consider how such information can be used in policy**. The lecture also emphasised that, although remote sensing data can provide consistent spatial and temporal information when combined with other GIS datasets, many studies only demonstrate relevance to a problem and do not go far enough in addressing which areas should be prioritised, who should use the data, or at what stage it should be incorporated into the planning process.
 
 ### Why Ho Chi Minh City?
 
@@ -39,7 +39,7 @@ Personally, thinking through this topic helped me understand more realistically 
 
 ### What I learned
 
-In the case of Ho Chi Minh City, what is technically observable and what can actually function as policy are not the same thing. That is why I think there is value not only in providing a one-off external analysis, but in building a foundation of knowledge and skills that can be updated locally over time. At the same time, I also recognise that this idea could remain idealistic, because in practice it must still confront constraints of institutions, budgets, human resources, and data sharing. What impressed me most in this week’s lecture was that EO is not a neutral technology that simply reveals the truth. Its value depends on how it is used. In that sense, policy week felt less about technology itself and more about governance.
+In the case of Ho Chi Minh City, **what is technically observable and what can actually function as policy are not the same thing.** That is why I think there is value not only in providing a one-off external analysis, but in building a foundation of knowledge and skills that can be updated locally over time. At the same time, I also recognise that this idea could remain idealistic, because in practice it must still confront constraints of institutions, budgets, human resources, and data sharing. What impressed me most in this week’s lecture was that **EO is not a neutral technology that simply reveals the truth. Its value depends on how it is used.** In that sense, policy week felt less about technology itself and more about governance.
 
 ## Reference
 
