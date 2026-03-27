@@ -13,11 +13,11 @@ Quarto is a platform where text, code, and visual results coexist in a single do
 
 ### Xaringan: Sharing Knowledge through the "Sharingan"
 
-The slide creation tool "Xaringan" was particularly intriguing. As the only Japanese student in the class, I felt an immediate connection to the name, even though I haven’t watched much *Naruto*. The tool embodies the open-source philosophy of "copying" and adapting excellent styles from others. The instant preview feature—"Infinite Tsukuyomi"—allows the screen to update the moment I save, highlighting the high-speed efficiency of programming compared to the manual exporting required in Canva.
+The slide creation tool "Xaringan" was particularly intriguing. As the only Japanese student in the class, I felt an immediate connection to the name, even though I haven’t watched much *Naruto*. The tool embodies the open-source philosophy of "copying" and adapting excellent styles from others. The instant preview feature allows the screen to update the moment I save, highlighting the speed and efficiency of programming compared to the manual exporting required in Canva.
 
 ### Deploying a "Digital Twin" on GitHub
 
-Andy’s story about a student securing a job through their portfolio was highly motivating, especially as I am currently job hunting. Publishing this diary on GitHub feels like placing "proof of my learning" on the global stage. It allows me to showcase not just a polished final product, but the raw, trial-and-error process—such as my struggles with SNAP in Week 1—as a record of my perseverance and problem-solving.
+Andy’s story about a student securing a job through their portfolio was highly motivating, especially as I am currently job hunting. Publishing this diary on GitHub feels like placing "proof of my learning" on the global stage. It allows me to showcase not just a polished final product, but the raw, trial and error process (such as my struggles with SNAP in Week 1) as a record of my perseverance and problem-solving.
 
 ## Xaringan Presentation
 
@@ -28,3 +28,4 @@ xaringanExtra::embed_xaringan(
   url = "file:///Users/chohtsuyoshi/Desktop/CASA0023/Xaringan.html",
   ratio = "16:9"
 )
+```
