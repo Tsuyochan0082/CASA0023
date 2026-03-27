@@ -1,6 +1,5 @@
 ---
-title: "Policy (individual case study city)"
-author: "Tsuyoshi Choh"
+title: "Policy (individual case study: flood system in Ho-Chi-Min City)"
 format: html
 ---
 
@@ -14,7 +13,7 @@ In this case, I would like to focus on land subsidence in Ho Chi Minh City. In t
 
 Ho Chi Minh City is a suitable case for thinking about the connection between EO and policy because it faces overlapping pressures of rapid urbanisation, flood risk, and the vulnerability of being a delta city. In particular, when considering cases such as Jakarta, where multiple urban stresses including land subsidence have contributed to discussions that go beyond urban policy and into broader national spatial restructuring, I felt that Ho Chi Minh City also needs to connect subsidence monitoring to policy decision-making before the problem becomes more severe. (Figure1)In that sense, it seems more appropriate to understand EO not as a technology that directly solves urban problems, but as one that creates an evidence base for policy decisions.
 
-![Figure1: Compounding Hazards of Subsidence and Flooding in Ho Chi Minh City.](img/week4_flood.png)
+![Figure1: Compounding Hazards of Subsidence and Flooding in Ho Chi Minh City 2014.](img/week4_flood.png)
 
 This approach directly aligns with the New Urban Agenda, which recognizes delta cities’ vulnerability, and contributes to SDG Target 11.5 by reducing disaster impacts on human settlements.
 
@@ -43,3 +42,7 @@ Personally, thinking through this topic helped me understand more realistically 
 In the case of Ho Chi Minh City, what is technically observable and what can actually function as policy are not the same thing. That is why I think there is value not only in providing a one-off external analysis, but in building a foundation of knowledge and skills that can be updated locally over time. At the same time, I also recognise that this idea could remain idealistic, because in practice it must still confront constraints of institutions, budgets, human resources, and data sharing. What impressed me most in this week’s lecture was that EO is not a neutral technology that simply reveals the truth; its value depends on how it is used. In that sense, policy week felt less about technology itself and more about governance.
 
 ## Reference
+
+- World Bank (2015). *Vietnam - Ho Chi Minh City Flood Risk Management Project: Environmental and Social Impact Assessment*. Washington, DC: World Bank. Available at: https://documents.worldbank.org/en/publication/documents-reports/documentdetail/296891468330027063/vietnam-ho-chi-minh-city-flood-risk-management-project-environmental-and-social-impact-assessment
+
+- Tran, T.N. (2014). *Improvement of Flood Risk Assessment under Climate Change in Ho Chi Minh City with GIS Applications*. PhD thesis. Brandenburg University of Technology Cottbus-Senftenberg. Figure/image source adapted from author content available via ResearchGate.

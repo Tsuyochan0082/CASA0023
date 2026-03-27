@@ -1,6 +1,5 @@
 ---
-title: "Satellite Data Exploration and Spectral Analysis"
-author: "Tsuyoshi Choh"
+title: "intro to remote sensing"
 output: 
   html_document:
     self_contained: true
@@ -28,7 +27,7 @@ This week’s introduction to remote sensing highlights how spatial and spectral
 
 **Comparison of Macro and Micro Perspectives:**
 
-@wolch_urban_2014 provide a macro-level perspective, arguing that urban greening can paradoxically lead to "environmental gentrification" and the displacement of low-income residents. This demonstrates that time-series RS data is a crucial indicator for capturing broad social dynamics over decades. In contrast, @gascon_residential_2016 focus on a micro-level perspective regarding individual health. Here, the 10m resolution of Sentinel-2 is indispensable. Unlike the 30m resolution of Landsat, this technology captures "micro-scale greenery" like street trees and pocket parks. These elements were previously "invisible" to sensors but are essential for understanding daily human exposure to nature.
+Wolch, J.R.(@wolch2014) provide a macro-level perspective, arguing that urban greening can paradoxically lead to "environmental gentrification" and the displacement of low-income residents. This demonstrates that time-series RS data is a crucial indicator for capturing broad social dynamics over decades. In contrast, Gascon (@gascon2016) focus on a micro-level perspective regarding individual health. Here, the 10m resolution of Sentinel-2 is indispensable. Unlike the 30m resolution of Landsat, this technology captures "micro-scale greenery" like street trees and pocket parks. These elements were previously "invisible" to sensors but are essential for understanding daily human exposure to nature.
 
 **Synthesis and Future Implementation:**
 
@@ -43,9 +42,5 @@ The comparison between 10m and 30m imagery made the "fragility of truth" clear. 
 Ultimately, this week confirms the principle of "People over Pixels." While 10m imagery bridges the gap to reality, it remains a proxy. I now believe that the most powerful persuasion in urban policy comes from combining the qualitative energy of the field with the logical, multiscale evidence provided by remote sensing. I am eager to explore Google Earth Engine later this term to see if it can offer a more flexible middle ground between high-level computation and practical urban application.
 
 ## References
-
-Gascon, M., Triguero-Mas, M., Martínez, D., Dadvand, P., Forns, J., Plasència, A. and Nieuwenhuijsen, M.J. (2016). Residential green spaces and mortality: A systematic review. *Environmental Research*, 147, pp.58–70. Available at: https://doi.org/10.1016/j.envres.2016.03.029.
-
-Wolch, J.R., Byrne, J. and Newell, J.P. (2014). Urban green space, public health, and environmental justice: The challenge of making cities ‘just green enough’. *Landscape and Urban Planning*, 125, pp.234–244. Available at: https://doi.org/10.1016/j.landurbplan.2014.01.017.
 
 ------------------------------------------------------------------------

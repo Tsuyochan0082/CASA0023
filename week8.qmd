@@ -1,42 +1,36 @@
 ---
-title: "Learning Diary - Week 8: SAR"
-author: "Tsuyoshi Choh"
-date: "2026-03-25"
+title: "SAR Data and Damage Detection"
 format: html
 ---
 
-## 1. Summary: SAR-based Change Detection and the Beirut Case Study
+## Summary: SAR-based Change Detection and the Beirut Case Study
 
-The practical focused on the Beirut explosion as a case study for SAR-based damage detection. Instead of relying on a simple before-and-after comparison, the workflow used multiple pre-event and post-event Sentinel-1 images to calculate the mean and standard deviation of each pixel, and then applied a pixel-wise t-test to identify statistically significant change. The lecture also introduced the idea of using ROC curves to evaluate whether change detection results are actually reliable, which made it clear that producing an output map is not enough on its own and that validation matters. 
+The practical focused on the Beirut explosion as a case study for SAR-based damage detection. Instead of relying on a simple before-and-after comparison, the workflow used multiple pre-event and post-event Sentinel-1 images to calculate the mean and standard deviation of each pixel, and then applied a pixel-wise t-test to identify statistically significant change.(Figure1) The lecture also introduced the idea of using ROC curves to evaluate whether change detection results are actually reliable, which made it clear that producing an output map is not enough on its own and that validation matters. 
 
 At the same time, an important limitation was discussed: the assumptions behind a t-test do not always perfectly match the statistical properties of SAR data. I understood this as a reminder that the method is useful, but should not be treated as automatically precise simply because it looks technical.
 
-![Beirut Change Map](img/week8_img1.png)
+![Figure1:Change detection of Beirut Explosion](img/week8_img1.png)
 
 ### Application to Suzu City (Tsunami Damage)
-I then tried to apply this same workflow myself to the tsunami-affected coastal area of Suzu City. I was able to generate both a change map and a building-level change map, but the result did not produce a clear and concentrated damage pattern in the same way as the Beirut example. Instead, the mapped changes appeared more as a narrow band along the coastline, around settlements and port areas. 
+I then tried to apply this same workflow myself to the tsunami-affected coastal area of Suzu City. I was able to generate both a change map and a building-level change map(Figure2 & Figure3), but the result did not produce a clear and concentrated damage pattern in the same way as the Beirut example. Instead, the mapped changes appeared more as a narrow band along the coastline, around settlements and port areas.
+This pattern reflects the physical principle behind SAR: calm water surfaces reflect radar pulses away from the sensor through specular reflection, appearing dark, while tsunami debris or damaged structures increase backscatter intensity. In other words, SAR was not directly showing "damage itself" but rather highlighting where backscatter had changed significantly. In a tsunami setting, this distinction seems especially important, because damage may involve flooding, internal structural damage, or low-level destruction that does not necessarily appear as a dramatic top-down shape change. I also had to be mindful that while GEE provides Sentinel-1 C-band data in dB scale for visualisation, statistical analysis like the t-test should ideally consider the underlying distribution of the data.
+For that reason, I came to see SAR as a very effective tool for rapid, broad post-disaster assessment, but not as a definitive map of damage. Its outputs need to be interpreted more carefully as change candidate maps, rather than final damage maps.
 
-This made me realise that SAR was not directly showing “damage itself,” but rather highlighting where backscatter had changed significantly. In a tsunami setting, this distinction seems especially important, because damage may involve flooding, internal structural damage, or low-level destruction that does not necessarily appear as a dramatic top-down shape change. For that reason, I came to see SAR as a very effective tool for rapid, broad post-disaster assessment, but not as a definitive map of damage. Its outputs need to be interpreted more carefully as change candidate maps, rather than final damage maps.
+![Figure 2: Suzu Map](img/week8_img4.png)
 
-![Figure 2: Suzu Map](img/week8_img3.png)
+![Figure 3: Building-level Chnage Candidates in Suzu Map](img/week8_img2.png)
 
-![Figure 3: Building-level Suzu Map](img/week8_img2.png)
+## Application: Integration with Other Data Sources
 
-## 2. Application: Integration with Other Data Sources
-
-Having worked through this practical, I initially saw SAR-based change detection as a technique that could directly show damage itself. However, I came to feel that it actually functions more as a foundational dataset: it rapidly shows, at a broad spatial scale, where major change has occurred, and in doing so helps guide subsequent investigation and decision-making. This led me to become interested in what SAR is combined with in actual research.
+Having worked through this practical, I initially saw SAR-based change detection as a technique that could directly show damage itself. However, I came to feel that it actually functions more as a foundational dataset: it rapidly shows, at a broad spatial scale, where major change has occurred, and in doing so helps guide subsequent investigation and decision-making.
 
 ### Combination with Optical Imagery
-Looking at the literature, the most typical combination is with optical imagery. SAR is less constrained by weather conditions or time of day, which makes it useful for rapidly identifying change immediately after a disaster, whereas optical imagery allows damage to be understood more intuitively by human observers. In their review, Ge et al. explain that, in disaster-related building damage assessment, SAR offers strengths in spatial coverage, timeliness, and all-weather capability, while also having limitations in terms of visual interpretability, which makes its complementary use with optical imagery especially important. 
+The most typical combination is with optical imagery. SAR is less constrained by weather conditions or time of day, making it useful for rapidly identifying change immediately after a disaster, whereas optical imagery allows damage to be understood more intuitively. In their review, Ge et al. (@ge2020) explain that SAR offers strengths in spatial coverage, timeliness, and all-weather capability, while having limitations in visual interpretability, which makes its complementary use with optical imagery especially important. Beyond simple visual comparison, more advanced fusion approaches can be employed: for instance, an IHS transformation replaces the intensity component of an optical RGB image with SAR backscatter, effectively combining human-intuitive color with radar's structural detail, directly addressing the visual interpretability limitation noted by Ge et al.
 
-I found that this relationship closely matched my own understanding from the practical. In other words, rather than treating SAR as a complete final map on its own, it makes more sense to first use SAR to identify areas of major change and then use optical imagery to examine what the damage actually looks like.
+### Combination with Social Media Data
+Among many other possible combinations, the one I found most interesting was the use of social media imagery. Satellite imagery is inevitably synoptic: it can show where major change has occurred, but it cannot always fully capture how damage was actually experienced on the ground. In their study of Hurricane Dorian, Imran et al. (@imran2020) present a framework in which images posted on Twitter were collected and processed through a combination of human and machine classification. What I found especially convincing was the idea that social data can supplement the on-the-ground view that synoptic datasets like SAR cannot fully provide. However, filtering and classification are essential, and social data involve issues such as spatial bias and misinformation, making it most realistic to treat SAR as a synoptic indicator of where attention should be focused, with optical or social media imagery then explaining what was actually happening there.
 
-### Combination with Social Media Data (SNS)
-Among the many other possible combinations, the one I found most interesting was the use of social data, particularly SNS image data. Satellite imagery is inevitably synoptic: it can show where major change has occurred, but it cannot always fully capture how damage was actually experienced on the ground. In that sense, social media imagery, with its ground-level perspective, seemed especially compelling as a complementary source. 
-
-In their study of Hurricane Dorian, Imran et al. present a framework in which images posted on Twitter were collected for disaster response purposes and then processed through a combination of human and machine classification. What I found especially convincing in this study was the idea that social data can supplement the “on-the-ground view” that cannot be fully seen in synoptic datasets such as SAR. However, filtering and classification are essential, and social data involve issues such as spatial bias and misinformation. It seems most realistic to think of the relationship in the following way: SAR first provides a synoptic indication of where attention should be focused, and then optical imagery or SNS images help explain what was actually happening there.
-
-## 3. Reflection: The Value of SAR in Disaster Management
+## Reflection: The Value of SAR in Disaster Management
 
 What stood out to me most this week was that I began to understand SAR not as a technology that produces a complete and final picture of damage, but as a form of foundational information that can support decision-making immediately after a disaster. Before doing the practical, the output of change detection looked to me like it could simply be read as a damage map. However, when I applied the workflow myself to the tsunami-affected area of Suzu, I realised that SAR is really showing statistically significant changes in backscatter, and that interpreting those changes still requires caution. 
 

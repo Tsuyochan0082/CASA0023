@@ -1,7 +1,5 @@
 ---
-title: "Week 6 Learning Diary: Machine Learning and Land Cover Classification"
-author: "Tsuyoshi Choh"
-date: "2026-03-17"
+title: "Machine Learning and Land Cover Classification"
 output: html_document
 ---
 
@@ -32,9 +30,9 @@ I ultimately achieved 99.7% accuracy, though I am fully aware this contains opti
 
 My primary takeaway from this week is that the choice between treating land as "pixels" or as "objects" is not merely a technical preference; it directly relates to the **"Geographical Integrity"** of the researcher—what kind of urban "truth" one intends to reflect.
 
-**Comparison of Macro and Micro Perspectives:** When the objective is to grasp broad urban trends or complex interrelationships between multi-source data, macro-level analysis serves as a powerful tool. The study by Zhao et al. (2020) presents a method for structuring cities not just as a collection of pixels, but as a "Knowledge Graph". This approach prioritizes the "semantic relationships" and network structures behind individual data points. Rather than fixating solely on the values of isolated pixels, it highlights the importance of capturing a macro-perspective of how urban functions, land use, and resident mobility evolve over time.
+**Comparison of Macro and Micro Perspectives:** When the objective is to grasp broad urban trends or complex interrelationships between multi-source data, macro-level analysis serves as a powerful tool. The study by Zhao et al. (@zhao2020) presents a method for structuring cities not just as a collection of pixels, but as a "Knowledge Graph". This approach prioritizes the "semantic relationships" and network structures behind individual data points. Rather than fixating solely on the values of isolated pixels, it highlights the importance of capturing a macro-perspective of how urban functions, land use, and resident mobility evolve over time.
 
-In contrast, Rajji et al. (2022) provide a micro-level perspective focused on the physical geometry of the city. They estimate building heights from high-resolution imagery, but the key here is their redefinition of "shadows"—often treated as mere noise—as essential structural data associated with a building "object". Reflecting on my practical session, I believe the "ambiguity (grey areas)" that troubled me could have been resolved more accurately if I had treated those areas not as pixel points, but as objects with specific contexts, such as shape and solar orientation.
+In contrast, Rajji et al. (@raiji2022) provide a micro-level perspective focused on the physical geometry of the city. They estimate building heights from high-resolution imagery, but the key here is their redefinition of "shadows"—often treated as mere noise—as essential structural data associated with a building "object". Reflecting on my practical session, I believe the "ambiguity (grey areas)" that troubled me could have been resolved more accurately if I had treated those areas not as pixel points, but as objects with specific contexts, such as shape and solar orientation.
 
 **Synthesis and Future Implementation:** Connecting these two perspectives is the concept of **"Analytical Integrity"** that I arrived at through the practical exercise. While the grey noise I encountered could not be attributed to a single definitive cause, that very ambiguity was a vital experience that forced me to realize the limitations of relying solely on pixel-based numerical values.
 

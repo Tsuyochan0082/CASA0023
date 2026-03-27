@@ -1,6 +1,5 @@
 ---
-title: "# Portfolio and Presentation Tools"
-author: "Tsuyoshi Choh"
+title: "Portfolio and Xaringan"
 output: 
   html_document:
     self_contained: true
@@ -22,10 +21,12 @@ The slide creation tool "Xaringan" was particularly intriguing. As the only Japa
 
 ### Deploying a "Digital Twin" on GitHub
 
-An’s story about a student securing a job through their portfolio was highly motivating, especially as I am currently job hunting. Publishing this diary on GitHub feels like placing "proof of my learning" on the global stage. It allows me to showcase not just a polished final product, but the raw, trial-and-error process—such as my struggles with SNAP in Week 1—as a record of my perseverance and problem-solving.
+Andy’s story about a student securing a job through their portfolio was highly motivating, especially as I am currently job hunting. Publishing this diary on GitHub feels like placing "proof of my learning" on the global stage. It allows me to showcase not just a polished final product, but the raw, trial-and-error process—such as my struggles with SNAP in Week 1—as a record of my perseverance and problem-solving.
 
 ## Xaringan Presentation
 
 The following presentation summarizes a specific sensor and its applications in remote sensing.
 
-\`\`\`{r echo=FALSE} xaringanExtra::embed_xaringan( url = "YOUR_XARINGAN_URL_HERE", ratio = "16:9" ---
+```{r echo=FALSE} 
+xaringanExtra::embed_xaringan( url = "file:///Users/chohtsuyoshi/Desktop/CASA0023/Xaringan.htmlE", ratio = "16:9" )
+```
