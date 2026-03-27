@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Tsuyoshi Choh">
-<meta name="dcterms.date" content="2026-03-25">
 
-<title>9&nbsp; Learning Diary - Week 8: SAR – Learning Diary</title>
+<title>9&nbsp; SAR Data and Damage Detection – Learning Diary</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -84,7 +102,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week8.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Learning Diary - Week 8: SAR</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week8.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">SAR Data and Damage Detection</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -118,49 +136,49 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Satellite Data Exploration and Spectral Analysis</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">intro to remote sensing</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week 2: Portfolio and Presentation Tools</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Portfolio and Xaringan</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Remotely Sensing Cities and Environments</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Image Correction and Spectral Enhancement</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Learning Diary: Week 4</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Policy (individual case study: flood system in Ho-Chi-Min City)</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week5.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Learning Diary: Week 5</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Cloud Computing and Google Earth Engine</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week6.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Week 6 Learning Diary: Machine Learning and Land Cover Classification</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Machine Learning and Land Cover Classification</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week7.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Week 7 Learning Diary:</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Sub-pixel and OBIA Classification</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week8.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Learning Diary - Week 8: SAR</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">SAR Data and Damage Detection</span></span></a>
   </div>
 </li>
     </ul>
@@ -192,26 +210,14 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Learning Diary - Week 8: SAR</span></h1>
+<h1 class="title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">SAR Data and Damage Detection</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Tsuyoshi Choh </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">March 25, 2026</p>
-    </div>
-  </div>
   
     
   </div>
@@ -253,11 +259,11 @@ ul.task-list li input[type="checkbox"] {
 <p>Having worked through this practical, I initially saw SAR-based change detection as a technique that could directly show damage itself. However, I came to feel that it actually functions more as a foundational dataset: it rapidly shows, at a broad spatial scale, where major change has occurred, and in doing so helps guide subsequent investigation and decision-making.</p>
 <section id="combination-with-optical-imagery" class="level3" data-number="9.2.1">
 <h3 data-number="9.2.1" class="anchored" data-anchor-id="combination-with-optical-imagery"><span class="header-section-number">9.2.1</span> Combination with Optical Imagery</h3>
-<p>The most typical combination is with optical imagery. SAR is less constrained by weather conditions or time of day, making it useful for rapidly identifying change immediately after a disaster, whereas optical imagery allows damage to be understood more intuitively. In their review, Ge et al.&nbsp;explain that SAR offers strengths in spatial coverage, timeliness, and all-weather capability, while having limitations in visual interpretability, which makes its complementary use with optical imagery especially important. Beyond simple visual comparison, more advanced fusion approaches can be employed: for instance, an IHS transformation replaces the intensity component of an optical RGB image with SAR backscatter, effectively combining human-intuitive color with radar’s structural detail, directly addressing the visual interpretability limitation noted by Ge et al.</p>
+<p>The most typical combination is with optical imagery. SAR is less constrained by weather conditions or time of day, making it useful for rapidly identifying change immediately after a disaster, whereas optical imagery allows damage to be understood more intuitively. In their review, Ge et al.&nbsp;(<span class="citation" data-cites="ge2020">Ge, Gokon, and Meguro (<a href="#ref-ge2020" role="doc-biblioref">2020</a>)</span>) explain that SAR offers strengths in spatial coverage, timeliness, and all-weather capability, while having limitations in visual interpretability, which makes its complementary use with optical imagery especially important. Beyond simple visual comparison, more advanced fusion approaches can be employed: for instance, an IHS transformation replaces the intensity component of an optical RGB image with SAR backscatter, effectively combining human-intuitive color with radar’s structural detail, directly addressing the visual interpretability limitation noted by Ge et al.</p>
 </section>
 <section id="combination-with-social-media-data" class="level3" data-number="9.2.2">
 <h3 data-number="9.2.2" class="anchored" data-anchor-id="combination-with-social-media-data"><span class="header-section-number">9.2.2</span> Combination with Social Media Data</h3>
-<p>Among many other possible combinations, the one I found most interesting was the use of social media imagery. Satellite imagery is inevitably synoptic: it can show where major change has occurred, but it cannot always fully capture how damage was actually experienced on the ground. In their study of Hurricane Dorian, Imran et al.&nbsp;present a framework in which images posted on Twitter were collected and processed through a combination of human and machine classification. What I found especially convincing was the idea that social data can supplement the on-the-ground view that synoptic datasets like SAR cannot fully provide. However, filtering and classification are essential, and social data involve issues such as spatial bias and misinformation, making it most realistic to treat SAR as a synoptic indicator of where attention should be focused, with optical or social media imagery then explaining what was actually happening there.</p>
+<p>Among many other possible combinations, the one I found most interesting was the use of social media imagery. Satellite imagery is inevitably synoptic: it can show where major change has occurred, but it cannot always fully capture how damage was actually experienced on the ground. In their study of Hurricane Dorian, Imran et al.&nbsp;(<span class="citation" data-cites="imran2020">Imran et al. (<a href="#ref-imran2020" role="doc-biblioref">2020</a>)</span>) present a framework in which images posted on Twitter were collected and processed through a combination of human and machine classification. What I found especially convincing was the idea that social data can supplement the on-the-ground view that synoptic datasets like SAR cannot fully provide. However, filtering and classification are essential, and social data involve issues such as spatial bias and misinformation, making it most realistic to treat SAR as a synoptic indicator of where attention should be focused, with optical or social media imagery then explaining what was actually happening there.</p>
 </section>
 </section>
 <section id="reflection-the-value-of-sar-in-disaster-management" class="level2" data-number="9.3">
@@ -271,6 +277,14 @@ ul.task-list li input[type="checkbox"] {
 <p>Ge, P., Gokon, H. and Meguro, K. (2020) ‘A review on synthetic aperture radar-based building damage assessment in disasters’, Remote Sensing of Environment, 240, p.&nbsp;111693. Available at: Imran, M., Alam, F., Qazi, U., Ofli, F. and Imran, M. (2020) ‘Rapid damage assessment using social media images by combining human and machine intelligence’, in Proceedings of the 17th International Conference on Information Systems for Crisis Response and Management (ISCRAM 2020), pp.&nbsp;761–773. Available at: —</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-ge2020" class="csl-entry" role="listitem">
+Ge, Pingping, Hiroaki Gokon, and Kimiro Meguro. 2020. <span>“A Review on Synthetic Aperture Radar-Based Building Damage Assessment in Disasters.”</span> <em>Remote Sensing of Environment</em> 240: 111693. <a href="https://doi.org/10.1016/j.rse.2020.111693">https://doi.org/10.1016/j.rse.2020.111693</a>.
+</div>
+<div id="ref-imran2020" class="csl-entry" role="listitem">
+Imran, Muhammad, Firoj Alam, Umair Qazi, Steve Peterson, and Ferda Ofli. 2020. <span>“Rapid Damage Assessment Using Social Media Images by Combining Human and Machine Intelligence.”</span> In <em>Proceedings of the 17th ISCRAM Conference</em>, 1–13. Blacksburg, VA, USA. <a href="https://mimran.me/papers/rapid_damage_assessment_using_sm_images_dorian_ISCRAM2020.pdf">https://mimran.me/papers/rapid_damage_assessment_using_sm_images_dorian_ISCRAM2020.pdf</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -676,8 +690,8 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./week7.html" class="pagination-link" aria-label="Week 7 Learning Diary:">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Week 7 Learning Diary:</span></span>
+      <a href="./week7.html" class="pagination-link" aria-label="Sub-pixel and OBIA Classification">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Sub-pixel and OBIA Classification</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Tsuyoshi Choh">
 
-<title>5&nbsp; Learning Diary: Week 4 – Learning Diary</title>
+<title>5&nbsp; Policy (individual case study: flood system in Ho-Chi-Min City) – Learning Diary</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -84,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week4.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Learning Diary: Week 4</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week4.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Policy (individual case study: flood system in Ho-Chi-Min City)</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -118,49 +117,49 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Satellite Data Exploration and Spectral Analysis</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">intro to remote sensing</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week 2: Portfolio and Presentation Tools</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Portfolio and Xaringan</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Remotely Sensing Cities and Environments</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Image Correction and Spectral Enhancement</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week4.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Learning Diary: Week 4</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Policy (individual case study: flood system in Ho-Chi-Min City)</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week5.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Learning Diary: Week 5</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Cloud Computing and Google Earth Engine</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week6.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Week 6 Learning Diary: Machine Learning and Land Cover Classification</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Machine Learning and Land Cover Classification</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week7.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Week 7 Learning Diary:</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Sub-pixel and OBIA Classification</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week8.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Learning Diary - Week 8: SAR</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">SAR Data and Damage Detection</span></span></a>
   </div>
 </li>
     </ul>
@@ -173,21 +172,22 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#content-summary-connecting-eo-to-policy" id="toc-content-summary-connecting-eo-to-policy" class="nav-link active" data-scroll-target="#content-summary-connecting-eo-to-policy"><span class="header-section-number">5.1</span> 1. Content Summary: Connecting EO to Policy</a>
+  <li><a href="#content-summary" id="toc-content-summary" class="nav-link active" data-scroll-target="#content-summary"><span class="header-section-number">5.1</span> Content Summary</a>
   <ul class="collapse">
-  <li><a href="#connecting-eo-to-policy" id="toc-connecting-eo-to-policy" class="nav-link" data-scroll-target="#connecting-eo-to-policy"><span class="header-section-number">5.1.1</span> 1.1 Connecting EO to policy</a></li>
-  <li><a href="#why-ho-chi-minh-city" id="toc-why-ho-chi-minh-city" class="nav-link" data-scroll-target="#why-ho-chi-minh-city"><span class="header-section-number">5.1.2</span> 1.2 Why Ho Chi Minh City?</a></li>
+  <li><a href="#connecting-eo-to-policy" id="toc-connecting-eo-to-policy" class="nav-link" data-scroll-target="#connecting-eo-to-policy"><span class="header-section-number">5.1.1</span> Connecting EO to policy</a></li>
+  <li><a href="#why-ho-chi-minh-city" id="toc-why-ho-chi-minh-city" class="nav-link" data-scroll-target="#why-ho-chi-minh-city"><span class="header-section-number">5.1.2</span> Why Ho Chi Minh City?</a></li>
   </ul></li>
-  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">5.2</span> 2. Applications</a>
+  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">5.2</span> Applications</a>
   <ul class="collapse">
-  <li><a href="#what-eo-data-can-contribute" id="toc-what-eo-data-can-contribute" class="nav-link" data-scroll-target="#what-eo-data-can-contribute"><span class="header-section-number">5.2.1</span> 2.1 What EO data can contribute</a></li>
-  <li><a href="#proposal-building-an-educational-and-operational-system" id="toc-proposal-building-an-educational-and-operational-system" class="nav-link" data-scroll-target="#proposal-building-an-educational-and-operational-system"><span class="header-section-number">5.2.2</span> 2.2 Proposal: building an educational and operational system</a></li>
+  <li><a href="#what-eo-data-can-contribute" id="toc-what-eo-data-can-contribute" class="nav-link" data-scroll-target="#what-eo-data-can-contribute"><span class="header-section-number">5.2.1</span> What EO data can contribute</a></li>
+  <li><a href="#proposal-building-an-educational-and-operational-system" id="toc-proposal-building-an-educational-and-operational-system" class="nav-link" data-scroll-target="#proposal-building-an-educational-and-operational-system"><span class="header-section-number">5.2.2</span> Proposal: building an educational and operational system</a></li>
   </ul></li>
-  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">5.3</span> 3. Reflection</a>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">5.3</span> Reflection</a>
   <ul class="collapse">
-  <li><a href="#from-technology-to-governance" id="toc-from-technology-to-governance" class="nav-link" data-scroll-target="#from-technology-to-governance"><span class="header-section-number">5.3.1</span> 3.1 From technology to governance</a></li>
-  <li><a href="#what-i-learned" id="toc-what-i-learned" class="nav-link" data-scroll-target="#what-i-learned"><span class="header-section-number">5.3.2</span> 3.2 What I learned</a></li>
+  <li><a href="#from-technology-to-governance" id="toc-from-technology-to-governance" class="nav-link" data-scroll-target="#from-technology-to-governance"><span class="header-section-number">5.3.1</span> From technology to governance</a></li>
+  <li><a href="#what-i-learned" id="toc-what-i-learned" class="nav-link" data-scroll-target="#what-i-learned"><span class="header-section-number">5.3.2</span> What I learned</a></li>
   </ul></li>
+  <li><a href="#reference" id="toc-reference" class="nav-link" data-scroll-target="#reference"><span class="header-section-number">5.4</span> Reference</a></li>
   </ul>
 </nav>
     </div>
@@ -196,20 +196,13 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Learning Diary: Week 4</span></h1>
-<p class="subtitle lead">Google Earth Engine I: Paradigm Shift in Spatial Analysis</p>
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Policy (individual case study: flood system in Ho-Chi-Min City)</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Tsuyoshi Choh </p>
-          </div>
-  </div>
     
   
     
@@ -220,42 +213,61 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="content-summary-connecting-eo-to-policy" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="content-summary-connecting-eo-to-policy"><span class="header-section-number">5.1</span> 1. Content Summary: Connecting EO to Policy</h2>
+<section id="content-summary" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="content-summary"><span class="header-section-number">5.1</span> Content Summary</h2>
 <section id="connecting-eo-to-policy" class="level3" data-number="5.1.1">
-<h3 data-number="5.1.1" class="anchored" data-anchor-id="connecting-eo-to-policy"><span class="header-section-number">5.1.1</span> 1.1 Connecting EO to policy</h3>
+<h3 data-number="5.1.1" class="anchored" data-anchor-id="connecting-eo-to-policy"><span class="header-section-number">5.1.1</span> Connecting EO to policy</h3>
 <p>In this case, I would like to focus on land subsidence in Ho Chi Minh City. In the lecture, I learned that Earth Observation has many possibilities for visualising urban problems, but I also felt that it is important not only to make problems “visible” but also to consider how such information can be used in policy. The lecture also emphasised that, although remote sensing data can provide consistent spatial and temporal information when combined with other GIS datasets, many studies only demonstrate relevance to a problem and do not go far enough in addressing which areas should be prioritised, who should use the data, or at what stage it should be incorporated into the planning process.</p>
 </section>
 <section id="why-ho-chi-minh-city" class="level3" data-number="5.1.2">
-<h3 data-number="5.1.2" class="anchored" data-anchor-id="why-ho-chi-minh-city"><span class="header-section-number">5.1.2</span> 1.2 Why Ho Chi Minh City?</h3>
-<p>Ho Chi Minh City is a suitable case for thinking about the connection between EO and policy because it faces overlapping pressures of rapid urbanisation, flood risk, and the vulnerability of being a delta city. In particular, when considering cases such as Jakarta, where multiple urban stresses including land subsidence have contributed to discussions that go beyond urban policy and into broader national spatial restructuring, I felt that Ho Chi Minh City also needs to connect subsidence monitoring to policy decision-making before the problem becomes more severe. In that sense, it seems more appropriate to understand EO not as a technology that directly solves urban problems, but as one that creates an evidence base for policy decisions.</p>
+<h3 data-number="5.1.2" class="anchored" data-anchor-id="why-ho-chi-minh-city"><span class="header-section-number">5.1.2</span> Why Ho Chi Minh City?</h3>
+<p>Ho Chi Minh City is a suitable case for thinking about the connection between EO and policy because it faces overlapping pressures of rapid urbanisation, flood risk, and the vulnerability of being a delta city. In particular, when considering cases such as Jakarta, where multiple urban stresses including land subsidence have contributed to discussions that go beyond urban policy and into broader national spatial restructuring, I felt that Ho Chi Minh City also needs to connect subsidence monitoring to policy decision-making before the problem becomes more severe. (Figure1)In that sense, it seems more appropriate to understand EO not as a technology that directly solves urban problems, but as one that creates an evidence base for policy decisions.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/week4_flood.png" class="img-fluid figure-img"></p>
+<figcaption>Figure1: Compounding Hazards of Subsidence and Flooding in Ho Chi Minh City 2014.</figcaption>
+</figure>
+</div>
+<p>This approach directly aligns with the New Urban Agenda, which recognizes delta cities’ vulnerability, and contributes to SDG Target 11.5 by reducing disaster impacts on human settlements.</p>
 </section>
 </section>
 <section id="applications" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">5.2</span> 2. Applications</h2>
+<h2 data-number="5.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">5.2</span> Applications</h2>
 <section id="what-eo-data-can-contribute" class="level3" data-number="5.2.1">
-<h3 data-number="5.2.1" class="anchored" data-anchor-id="what-eo-data-can-contribute"><span class="header-section-number">5.2.1</span> 2.1 What EO data can contribute</h3>
-<p>In this case, I think the value of EO data lies not only in observing land subsidence itself, but also in contributing to decisions about where limited administrative resources should be directed first. For example, technologies such as InSAR can identify where subsidence is most severe and where it is continuing over time, both spatially and temporally. If this information is then overlaid with GIS datasets such as flood risk, land use, critical infrastructure, and population distribution, it could help provide a stronger spatial basis for revising the priorities of road repair, drainage improvement, and infrastructure inspection.</p>
-<p>However, although EO can show surface deformation, it cannot by itself determine either the causes of that deformation or the appropriate solution. Furthermore, technical uncertainties and margins of error inherent in InSAR data must be clearly communicated to avoid over-reliance on a single data source. For that reason, the results of observation cannot simply be translated directly into policy. It is also necessary to confront questions of policy implementation: which areas should be prioritised, who should be responsible, what skills are required, and what kinds of benefits this approach can bring to the city.</p>
+<h3 data-number="5.2.1" class="anchored" data-anchor-id="what-eo-data-can-contribute"><span class="header-section-number">5.2.1</span> What EO data can contribute</h3>
+<p>In this case, I think the value of EO data lies not only in observing land subsidence itself, but also in contributing to decisions about where limited administrative resources should be directed first. Currently, Ho Chi Minh City largely relies on fragmented ground-based monitoring and conventional flood management policies that often focus on monitoring rather than proactive prevention. While these provide localized data, they lack the consistent spatial coverage needed for a city-wide strategic response. Technologies such as InSAR can advance this current approach by identifying where subsidence is most severe and how it evolves spatially and temporally through phase difference analysis.</p>
+<p>If this information is then overlaid with GIS datasets such as flood risk, land use, and critical infrastructure, it transforms remote sensing from a mere observation tool into a decision-support system that assists in prioritising road repairs and drainage improvements. However, we must account for technical noise in dense urban areas, such as corner reflections and speckle, which can obscure patterns if not properly evaluated. For that reason, the results cannot simply be translated directly into policy without addressing the human and institutional skills required to interpret them.</p>
 </section>
 <section id="proposal-building-an-educational-and-operational-system" class="level3" data-number="5.2.2">
-<h3 data-number="5.2.2" class="anchored" data-anchor-id="proposal-building-an-educational-and-operational-system"><span class="header-section-number">5.2.2</span> 2.2 Proposal: building an educational and operational system</h3>
-<p>What I would like to propose is not simply the creation of a subsidence map, but the establishment of an educational and operational system through which this kind of analysis can be continuously updated locally. In an environment where there may be constraints on long-term external data access and management, it may be more sustainable not to provide a completed map from outside as a one-off product. Instead, I propose empowering local institutions, such as the Department of Urban Planning and Architecture (DPA), to enable local engineers and administrative staff to interpret EO data, visualise risk through GIS, set maintenance priorities, and evaluate results for themselves. If this improves the prioritisation of road repair and drainage works, and even slightly reduces wasted spending under limited budgets, then part of that savings could be reinvested into further training and future updates. In that sense, the role of EO in this topic may lie not simply in producing an “accurate map,” but in creating a locally sustainable decision-support system.</p>
+<h3 data-number="5.2.2" class="anchored" data-anchor-id="proposal-building-an-educational-and-operational-system"><span class="header-section-number">5.2.2</span> Proposal: building an educational and operational system</h3>
+<p>What I would like to propose is not simply the creation of a subsidence map, but the establishment of an educational and operational system through which this kind of analysis can be continuously updated locally. In an environment where there may be constraints on long-term external data access and management, it may be more sustainable not to provide a completed map from outside as a one-off product. Instead, I propose empowering local institutions, such as the Department of Urban Planning and Architecture (DPA), to enable local engineers and administrative staff to interpret EO data, visualise risk through GIS, set maintenance priorities, and evaluate results for themselves. If this improves the prioritisation of road repair and drainage works, and even slightly reduces wasted spending under limited budgets, then part of that savings could be reinvested into further training and future updates. In that sense, the role of EO in this topic may lie not simply in producing an “accurate map,” but in creating a locally sustainable decision-support system, as conceptualized in Figure 2.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/circulation_week4.jpeg" class="img-fluid figure-img"></p>
+<figcaption>Figure2: The Integrated Decision-Support Cycle for Urban Governance.</figcaption>
+</figure>
+</div>
 </section>
 </section>
 <section id="reflection" class="level2" data-number="5.3">
-<h2 data-number="5.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">5.3</span> 3. Reflection</h2>
+<h2 data-number="5.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">5.3</span> Reflection</h2>
 <section id="from-technology-to-governance" class="level3" data-number="5.3.1">
-<h3 data-number="5.3.1" class="anchored" data-anchor-id="from-technology-to-governance"><span class="header-section-number">5.3.1</span> 3.1 From technology to governance</h3>
+<h3 data-number="5.3.1" class="anchored" data-anchor-id="from-technology-to-governance"><span class="header-section-number">5.3.1</span> From technology to governance</h3>
 <p>Personally, thinking through this topic helped me understand more realistically what it means to use EO in policy. At first, I thought that for a problem such as land subsidence, the main priority was simply to create the most accurate map possible. However, through the lecture, I came to feel that what matters more is who uses that map, within what budgetary and institutional context, and at what stage of decision-making it is incorporated.</p>
 </section>
 <section id="what-i-learned" class="level3" data-number="5.3.2">
-<h3 data-number="5.3.2" class="anchored" data-anchor-id="what-i-learned"><span class="header-section-number">5.3.2</span> 3.2 What I learned</h3>
+<h3 data-number="5.3.2" class="anchored" data-anchor-id="what-i-learned"><span class="header-section-number">5.3.2</span> What I learned</h3>
 <p>In the case of Ho Chi Minh City, what is technically observable and what can actually function as policy are not the same thing. That is why I think there is value not only in providing a one-off external analysis, but in building a foundation of knowledge and skills that can be updated locally over time. At the same time, I also recognise that this idea could remain idealistic, because in practice it must still confront constraints of institutions, budgets, human resources, and data sharing. What impressed me most in this week’s lecture was that EO is not a neutral technology that simply reveals the truth; its value depends on how it is used. In that sense, policy week felt less about technology itself and more about governance.</p>
-<hr>
-
-
 </section>
+</section>
+<section id="reference" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="reference"><span class="header-section-number">5.4</span> Reference</h2>
+<ul>
+<li><p>World Bank (2015). <em>Vietnam - Ho Chi Minh City Flood Risk Management Project: Environmental and Social Impact Assessment</em>. Washington, DC: World Bank. Available at: https://documents.worldbank.org/en/publication/documents-reports/documentdetail/296891468330027063/vietnam-ho-chi-minh-city-flood-risk-management-project-environmental-and-social-impact-assessment</p></li>
+<li><p>Tran, T.N. (2014). <em>Improvement of Flood Risk Assessment under Climate Change in Ho Chi Minh City with GIS Applications</em>. PhD thesis. Brandenburg University of Technology Cottbus-Senftenberg. Figure/image source adapted from author content available via ResearchGate.</p></li>
+</ul>
+
+
 </section>
 
 </main> <!-- /main -->
@@ -661,13 +673,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./week3.html" class="pagination-link" aria-label="Remotely Sensing Cities and Environments">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Remotely Sensing Cities and Environments</span></span>
+      <a href="./week3.html" class="pagination-link" aria-label="Image Correction and Spectral Enhancement">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Image Correction and Spectral Enhancement</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./week5.html" class="pagination-link" aria-label="Learning Diary: Week 5">
-        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Learning Diary: Week 5</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./week5.html" class="pagination-link" aria-label="Cloud Computing and Google Earth Engine">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Cloud Computing and Google Earth Engine</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

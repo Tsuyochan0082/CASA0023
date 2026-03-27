@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Tsuyoshi Choh">
-<meta name="dcterms.date" content="2026-03-17">
 
-<title>7&nbsp; Week 6 Learning Diary: Machine Learning and Land Cover Classification – Learning Diary</title>
+<title>7&nbsp; Machine Learning and Land Cover Classification – Learning Diary</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -85,7 +103,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week6.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Week 6 Learning Diary: Machine Learning and Land Cover Classification</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week6.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Machine Learning and Land Cover Classification</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -119,49 +137,49 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Satellite Data Exploration and Spectral Analysis</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">intro to remote sensing</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week 2: Portfolio and Presentation Tools</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Portfolio and Xaringan</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Remotely Sensing Cities and Environments</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Image Correction and Spectral Enhancement</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Learning Diary: Week 4</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Policy (individual case study: flood system in Ho-Chi-Min City)</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week5.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Learning Diary: Week 5</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Cloud Computing and Google Earth Engine</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week6.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Week 6 Learning Diary: Machine Learning and Land Cover Classification</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Machine Learning and Land Cover Classification</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week7.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Week 7 Learning Diary:</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Sub-pixel and OBIA Classification</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week8.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Learning Diary - Week 8: SAR</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">SAR Data and Damage Detection</span></span></a>
   </div>
 </li>
     </ul>
@@ -191,26 +209,14 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Week 6 Learning Diary: Machine Learning and Land Cover Classification</span></h1>
+<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Machine Learning and Land Cover Classification</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Tsuyoshi Choh </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">March 17, 2026</p>
-    </div>
-  </div>
   
     
   </div>
@@ -252,8 +258,8 @@ ul.task-list li input[type="checkbox"] {
 <section id="applications" class="level2" data-number="7.2">
 <h2 data-number="7.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">7.2</span> Applications</h2>
 <p>My primary takeaway from this week is that the choice between treating land as “pixels” or as “objects” is not merely a technical preference; it directly relates to the <strong>“Geographical Integrity”</strong> of the researcher—what kind of urban “truth” one intends to reflect.</p>
-<p><strong>Comparison of Macro and Micro Perspectives:</strong> When the objective is to grasp broad urban trends or complex interrelationships between multi-source data, macro-level analysis serves as a powerful tool. The study by Zhao et al.&nbsp;(2020) presents a method for structuring cities not just as a collection of pixels, but as a “Knowledge Graph”. This approach prioritizes the “semantic relationships” and network structures behind individual data points. Rather than fixating solely on the values of isolated pixels, it highlights the importance of capturing a macro-perspective of how urban functions, land use, and resident mobility evolve over time.</p>
-<p>In contrast, Rajji et al.&nbsp;(2022) provide a micro-level perspective focused on the physical geometry of the city. They estimate building heights from high-resolution imagery, but the key here is their redefinition of “shadows”—often treated as mere noise—as essential structural data associated with a building “object”. Reflecting on my practical session, I believe the “ambiguity (grey areas)” that troubled me could have been resolved more accurately if I had treated those areas not as pixel points, but as objects with specific contexts, such as shape and solar orientation.</p>
+<p><strong>Comparison of Macro and Micro Perspectives:</strong> When the objective is to grasp broad urban trends or complex interrelationships between multi-source data, macro-level analysis serves as a powerful tool. The study by Zhao et al.&nbsp;(<span class="citation" data-cites="zhao2020">Zhao et al. (<a href="#ref-zhao2020" role="doc-biblioref">2020</a>)</span>) presents a method for structuring cities not just as a collection of pixels, but as a “Knowledge Graph”. This approach prioritizes the “semantic relationships” and network structures behind individual data points. Rather than fixating solely on the values of isolated pixels, it highlights the importance of capturing a macro-perspective of how urban functions, land use, and resident mobility evolve over time.</p>
+<p>In contrast, Rajji et al.&nbsp;(<span class="citation" data-cites="raiji2022">(<a href="#ref-raiji2022" role="doc-biblioref"><strong>raiji2022?</strong></a>)</span>) provide a micro-level perspective focused on the physical geometry of the city. They estimate building heights from high-resolution imagery, but the key here is their redefinition of “shadows”—often treated as mere noise—as essential structural data associated with a building “object”. Reflecting on my practical session, I believe the “ambiguity (grey areas)” that troubled me could have been resolved more accurately if I had treated those areas not as pixel points, but as objects with specific contexts, such as shape and solar orientation.</p>
 <p><strong>Synthesis and Future Implementation:</strong> Connecting these two perspectives is the concept of <strong>“Analytical Integrity”</strong> that I arrived at through the practical exercise. While the grey noise I encountered could not be attributed to a single definitive cause, that very ambiguity was a vital experience that forced me to realize the limitations of relying solely on pixel-based numerical values.</p>
 </section>
 <section id="reflection" class="level2" data-number="7.3">
@@ -264,6 +270,11 @@ ul.task-list li input[type="checkbox"] {
 <h2 data-number="7.4" class="anchored" data-anchor-id="reference"><span class="header-section-number">7.4</span> Reference</h2>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-zhao2020" class="csl-entry" role="listitem">
+Zhao, Lin, Jian Rao, Sang-Bing Li, Qing Huang, Qiang Wu, and Weiqiang Xu. 2020. <span>“Urban Multi-Source Spatio-Temporal Data Analysis Aware Knowledge Graph Embedding.”</span> <em>Symmetry</em> 12 (2): 199. <a href="https://doi.org/10.3390/sym12020199">https://doi.org/10.3390/sym12020199</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -669,13 +680,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./week5.html" class="pagination-link" aria-label="Learning Diary: Week 5">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Learning Diary: Week 5</span></span>
+      <a href="./week5.html" class="pagination-link" aria-label="Cloud Computing and Google Earth Engine">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Cloud Computing and Google Earth Engine</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./week7.html" class="pagination-link" aria-label="Week 7 Learning Diary:">
-        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Week 7 Learning Diary:</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./week7.html" class="pagination-link" aria-label="Sub-pixel and OBIA Classification">
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Sub-pixel and OBIA Classification</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

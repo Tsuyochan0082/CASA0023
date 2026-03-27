@@ -10,32 +10,32 @@ Each week, I will reflect on the key themes, methods, and questions raised in cl
 
 ## Week 1
 
--   [Introduction to Remote Sensing](Week1.qmd)
+-   [intro to remote sensing](https://tsuyochan0082.github.io/CASA0023/week1.html)
 
 ## Week 2
 
--   [Quarto Books and Xaringan Presentations](Week2.qmd)
+-   [Portfolio and Xaringan](https://tsuyochan0082.github.io/CASA0023/week2.html)
 
 ## Week 3
 
--   [Corrections and Enhancements](Week3.qmd)
+-   [Image Correction and Spectral Enhancement](https://tsuyochan0082.github.io/CASA0023/week3.html)
 
 ## Week 4
 
--   [Project Case Study](Week4.qmd)
+-   [Policy (individual case study: flood system in Ho-Chi-Min City)](https://tsuyochan0082.github.io/CASA0023/week4.html)
 
 ## Week 5
 
--   [Introduction to Google Earth Engine](Week5.qmd)
+-   [Cloud Computing and Google Earth Engine](https://tsuyochan0082.github.io/CASA0023/week5.html)
 
 ## Week 6
 
--   [Remote Sensing and Machine Learning](Week6.qmd)
+-   [Machine Learning and Land Cover Classification](https://tsuyochan0082.github.io/CASA0023/week6.html)
 
 ## Week 7
 
--   [Sub-Pixel and OBIA Classification](Week7.qmd)
+-   [Sub-pixel and OBIA Classification](https://tsuyochan0082.github.io/CASA0023/week7.html)
 
 ## Week 8
 
--   [SAR Damage Detection](Week8.qmd)
+-   [SAR Data and Damage Detection](https://tsuyochan0082.github.io/CASA0023/week8.html)

@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Tsuyoshi Choh">
 
-<title>6&nbsp; Learning Diary: Week 5 – Learning Diary</title>
+<title>6&nbsp; Cloud Computing and Google Earth Engine – Learning Diary</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -84,7 +103,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week5.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Learning Diary: Week 5</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week5.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Cloud Computing and Google Earth Engine</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -118,49 +137,49 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Satellite Data Exploration and Spectral Analysis</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">intro to remote sensing</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week 2: Portfolio and Presentation Tools</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Portfolio and Xaringan</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Remotely Sensing Cities and Environments</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Image Correction and Spectral Enhancement</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Learning Diary: Week 4</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Policy (individual case study: flood system in Ho-Chi-Min City)</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week5.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Learning Diary: Week 5</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Cloud Computing and Google Earth Engine</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week6.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Week 6 Learning Diary: Machine Learning and Land Cover Classification</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Machine Learning and Land Cover Classification</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week7.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Week 7 Learning Diary:</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Sub-pixel and OBIA Classification</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week8.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Learning Diary - Week 8: SAR</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">SAR Data and Damage Detection</span></span></a>
   </div>
 </li>
     </ul>
@@ -180,7 +199,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#efficient-data-abstraction-pca-and-the-evidence-of-the-97" id="toc-efficient-data-abstraction-pca-and-the-evidence-of-the-97" class="nav-link" data-scroll-target="#efficient-data-abstraction-pca-and-the-evidence-of-the-97"><span class="header-section-number">6.1.3</span> Efficient Data Abstraction: PCA and the Evidence of the “97%”</a></li>
   </ul></li>
   <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">6.2</span> Applications</a></li>
-  <li><a href="#personal-reflection" id="toc-personal-reflection" class="nav-link" data-scroll-target="#personal-reflection"><span class="header-section-number">6.3</span> Personal Reflection</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">6.3</span> Reflection</a></li>
   <li><a href="#reference" id="toc-reference" class="nav-link" data-scroll-target="#reference"><span class="header-section-number">6.4</span> Reference</a></li>
   </ul>
 </nav>
@@ -190,20 +209,13 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Learning Diary: Week 5</span></h1>
-<p class="subtitle lead">Google Earth Engine I: Paradigm Shift in Spatial Analysis</p>
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Cloud Computing and Google Earth Engine</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Tsuyoshi Choh </p>
-          </div>
-  </div>
     
   
     
@@ -267,18 +279,26 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="applications" class="level2" data-number="6.2">
 <h2 data-number="6.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">6.2</span> Applications</h2>
-<p>The practical sessions highlighted that the core strength of Google Earth Engine (GEE) lies not merely in its computational speed or data accessibility, but in how these efficiencies enable deeper analytical inquiry. This perspective was reinforced by Phan and Kappas (2020), who demonstrated that GEE’s capacity for rapid processing allows researchers to shift their focus from the final classification result to the underlying methodological choices, such as image compositing strategies. By comparing various compositing methods, they showed that the way input imagery is assembled significantly influences classification accuracy. For me, the significance of this study is that GEE’s speed allowed the researchers to move beyond “getting a result” to asking a more meaningful question: <em>What kind of image composite best represents this specific landscape?</em> Phan and Kappas reported that while complex time-series data yielded high accuracy, a carefully selected median composite performed similarly, suggesting that the choice of compositing method is itself a critical research question.</p>
-<p>This concept of “methodological choice as analysis” became even clearer through Zhang et al.&nbsp;(2021). Their study compared different annual composites created with GEE reducers for urban mapping and found that a combination of multiple reducers outperformed any single reducer. This helped me realize that reducers are not just time-saving functions; they represent analytical decisions about what constitutes “signal” versus “noise” within a massive image archive. This directly mirrors my experience in the practical, where the median reducer effectively mitigated cloud interference to produce a clearer image.</p>
+<p>The practical sessions highlighted that the core strength of Google Earth Engine (GEE) lies not merely in its computational speed or data accessibility, but in how these efficiencies enable deeper analytical inquiry. This perspective was reinforced by Phan and Kappas (<span class="citation" data-cites="phan2020">Phan and Kappas (<a href="#ref-phan2020" role="doc-biblioref">2020</a>)</span>), who demonstrated that GEE’s capacity for rapid processing allows researchers to shift their focus from the final classification result to the underlying methodological choices, such as image compositing strategies. By comparing various compositing methods, they showed that the way input imagery is assembled significantly influences classification accuracy. For me, the significance of this study is that GEE’s speed allowed the researchers to move beyond “getting a result” to asking a more meaningful question: <em>What kind of image composite best represents this specific landscape?</em> Phan and Kappas reported that while complex time-series data yielded high accuracy, a carefully selected median composite performed similarly, suggesting that the choice of compositing method is itself a critical research question.</p>
+<p>This concept of “methodological choice as analysis” became even clearer through Zhang et al.&nbsp;(<span class="citation" data-cites="zhang2021">Zhang et al. (<a href="#ref-zhang2021" role="doc-biblioref">2021</a>)</span>). Their study compared different annual composites created with GEE reducers for urban mapping and found that a combination of multiple reducers outperformed any single reducer. This helped me realize that reducers are not just time-saving functions; they represent analytical decisions about what constitutes “signal” versus “noise” within a massive image archive. This directly mirrors my experience in the practical, where the median reducer effectively mitigated cloud interference to produce a clearer image.</p>
 <p>However, this process also demands caution. While reducers improve readability and accuracy, they risk treating short-term environmental changes or rare phenomena as statistical outliers to be removed. Thus, GEE does not make the analyst less necessary; rather, it demands more active judgment regarding processing choices and the interpretation of results. Ultimately, the true value of GEE lies in freeing the researcher from technical bottlenecks, thereby providing the time to compare methods and think more critically about the geographical meaning of the output.</p>
 </section>
-<section id="personal-reflection" class="level2" data-number="6.3">
-<h2 data-number="6.3" class="anchored" data-anchor-id="personal-reflection"><span class="header-section-number">6.3</span> Personal Reflection</h2>
+<section id="reflection" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">6.3</span> Reflection</h2>
 <p>This week provided my first clear understanding of the practical value of cloud-based systems. While I had encountered the term “cloud” during job hunting, I had never fully grasped its direct relevance to my own analytical workflow. Having previously struggled with software performance due to limited local hardware specifications, I found it particularly meaningful that Google Earth Engine (GEE) decouples analysis from physical hardware constraints by “bringing the code to the data” on remote servers. In this sense, GEE represents more than just a convenient tool; it is a prime example of the “democratization of data analysis,” making spatial inquiry accessible to anyone without prohibitive infrastructure costs. However, GEE demands a fundamental shift in mindset beyond just speed. Rather than manipulating data directly, I learned that I am interacting with Proxy Objects, which are handles to data residing on Google’s servers. This required me to restructure my geographical logic entirely. A significant challenge was the transition from procedural loops to functional mapping, which allows GEE to distribute processing efficiently across multiple machines in parallel . Furthermore, the fact that scale or resolution is determined by the output rather than the input was a revelation. Understanding how GEE selects the appropriate level from an image pyramid and resamples data highlighted my responsibility as an analyst to critically evaluate the scale at which results are calculated. I also recognized that as the process becomes more seamless, it risks becoming a “black box.” Because results can be generated with such ease, it becomes increasingly difficult to personally verify the methodological soundness of every underlying calculation. This has reinforced my belief that continuing to master tools like R and QGIS remains essential for understanding fundamental processes, rather than simply accepting automated outputs. For me, this week was valuable not only for introducing an advanced technology but for prompting a serious reflection on how to use such power critically and responsibly.</p>
 </section>
 <section id="reference" class="level2" data-number="6.4">
 <h2 data-number="6.4" class="anchored" data-anchor-id="reference"><span class="header-section-number">6.4</span> Reference</h2>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-phan2020" class="csl-entry" role="listitem">
+Phan, T. N., and M. Kappas. 2020. <span>“Land Cover Classification Using Google Earth Engine and Random Forest Classifier—the Role of Image Composition.”</span> <em>Remote Sensing</em> 12 (15): 2411. <a href="https://doi.org/10.3390/rs12152411">https://doi.org/10.3390/rs12152411</a>.
+</div>
+<div id="ref-zhang2021" class="csl-entry" role="listitem">
+Zhang, Zhaoming, Mingyue Wei, Dongchuan Pu, Guojin He, Guizhou Wang, and Tengfei Long. 2021. <span>“Assessment of Annual Composite Images Obtained by Google Earth Engine for Urban Areas Mapping Using Random Forest.”</span> <em>Remote Sensing</em> 13 (4): 748. <a href="https://doi.org/10.3390/rs13040748">https://doi.org/10.3390/rs13040748</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -684,13 +704,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./week4.html" class="pagination-link" aria-label="Learning Diary: Week 4">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Learning Diary: Week 4</span></span>
+      <a href="./week4.html" class="pagination-link" aria-label="Policy (individual case study: flood system in Ho-Chi-Min City)">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Policy (individual case study: flood system in Ho-Chi-Min City)</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./week6.html" class="pagination-link" aria-label="Week 6 Learning Diary: Machine Learning and Land Cover Classification">
-        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Week 6 Learning Diary: Machine Learning and Land Cover Classification</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./week6.html" class="pagination-link" aria-label="Machine Learning and Land Cover Classification">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Machine Learning and Land Cover Classification</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
